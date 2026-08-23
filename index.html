@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆瓣Top 250变化追踪器</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-film"></i>
+                    <h1>豆瓣Top 250变化追踪器</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn active" data-tab="changes">
+                        <i class="fas fa-exchange-alt"></i> 变化追踪
+                    </button>
+                    <button class="nav-btn" data-tab="ranking">
+                        <i class="fas fa-list-ol"></i> 完整榜单
+                    </button>
+                    <button class="nav-btn" data-tab="history">
+                        <i class="fas fa-history"></i> 历史数据
+                    </button>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="搜索电影...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="main">
+        <div class="container">
+            <!-- 加载状态 -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>正在加载数据...</p>
+            </div>
+
+            <!-- 错误提示 -->
+            <div id="error" class="error" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="errorMessage"></p>
+                <button onclick="loadData()">重试</button>
+            </div>
+
+            <!-- 变化追踪标签页 -->
+            <section id="changesTab" class="tab-content active">
+                <!-- 更新信息 -->
+                <div class="update-info">
+                    <div class="update-time">
+                        <i class="fas fa-clock"></i>
+                        <span>最后更新: <span id="lastUpdate">--</span></span>
+                    </div>
+                    <div class="update-stats">
+                        <span class="stat new"><i class="fas fa-plus-circle"></i> 新增: <span id="newCount">0</span></span>
+                        <span class="stat exit"><i class="fas fa-minus-circle"></i> 掉出: <span id="exitCount">0</span></span>
+                        <span class="stat up"><i class="fas fa-arrow-up"></i> 上升: <span id="upCount">0</span></span>
+                        <span class="stat down"><i class="fas fa-arrow-down"></i> 下降: <span id="downCount">0</span></span>
+                    </div>
+                </div>
+
+                <!-- 变化卡片网格 -->
+                <div class="changes-grid">
+                    <!-- 新进入榜单 -->
+                    <div class="change-card entered">
+                        <div class="card-header">
+                            <h3><i class="fas fa-plus-circle"></i> 新进入榜单</h3>
+                            <span class="badge" id="enteredBadge">0</span>
+                        </div>
+                        <div class="card-body" id="enteredList">
+                            <div class="empty-state">暂无数据</div>
+                        </div>
+                    </div>
+
+                    <!-- 掉出榜单 -->
+                    <div class="change-card exited">
+                        <div class="card-header">
+                            <h3><i class="fas fa-minus-circle"></i> 掉出榜单</h3>
+                            <span class="badge" id="exitedBadge">0</span>
+                        </div>
+                        <div class="card-body" id="exitedList">
+                            <div class="empty-state">暂无数据</div>
+                        </div>
+                    </div>
+
+                    <!-- 排名上升 -->
+                    <div class="change-card rank-up">
+                        <div class="card-header">
+                            <h3><i class="fas fa-arrow-up"></i> 排名上升</h3>
+                            <span class="badge" id="rankUpBadge">0</span>
+                        </div>
+                        <div class="card-body" id="rankUpList">
+                            <div class="empty-state">暂无数据</div>
+                        </div>
+                    </div>
+
+                    <!-- 排名下降 -->
+                    <div class="change-card rank-down">
+                        <div class="card-header">
+                            <h3><i class="fas fa-arrow-down"></i> 排名下降</h3>
+                            <span class="badge" id="rankDownBadge">0</span>
+                        </div>
+                        <div class="card-body" id="rankDownList">
+                            <div class="empty-state">暂无数据</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 完整榜单标签页 -->
+            <section id="rankingTab" class="tab-content">
+                <div class="ranking-controls">
+                    <div class="filter-group">
+                        <label>排序方式:</label>
+                        <select id="sortBy">
+                            <option value="rank">按排名</option>
+                            <option value="rating">按评分</option>
+                            <option value="year">按年份</option>
+                            <option value="rating_count">按评价人数</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>地区筛选:</label>
+                        <select id="filterRegion">
+                            <option value="">全部地区</option>
+                            <!-- 动态生成 -->
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>类型筛选:</label>
+                        <select id="filterGenre">
+                            <option value="">全部类型</option>
+                            <!-- 动态生成 -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ranking-list" id="rankingList">
+                    <!-- 动态生成电影列表 -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- 动态生成分页 -->
+                </div>
+            </section>
+
+            <!-- 历史数据标签页 -->
+            <section id="historyTab" class="tab-content">
+                <div class="history-header">
+                    <h3>历史快照</h3>
+                    <div class="date-picker">
+                        <label>选择日期:</label>
+                        <input type="date" id="historyDate">
+                        <button id="loadHistoryBtn" class="btn-primary">加载</button>
+                    </div>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- 动态生成历史列表 -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 电影详情弹窗 -->
+    <div class="modal" id="movieModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody">
+                <!-- 动态生成电影详情 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>数据来源: 豆瓣电影 | 每天自动更新</p>
+            <p class="disclaimer">本工具仅供学习交流使用，请勿用于商业用途</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
