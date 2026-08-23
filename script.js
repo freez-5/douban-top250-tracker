@@ -155,19 +155,26 @@ async function loadData() {
  */
 async function loadHistoryList() {
     try {
-        // 尝试加载历史目录的索引
-        // 由于GitHub Pages不支持目录列表，我们需要硬编码或使用其他方式
-        // 这里假设历史文件以日期命名，我们可以尝试加载最近的几个
-        const today = new Date();
-        const historyFiles = [];
+        // 预定义的历史文件列表（包括模拟的七月和八月数据）
+        const historyFiles = [
+            '2025-07-01',
+            '2025-08-01',
+            '2026-08-23',
+        ];
 
         // 尝试加载最近30天的历史数据
+        const today = new Date();
         for (let i = 0; i < 30; i++) {
             const date = new Date(today);
             date.setDate(date.getDate() - i);
             const dateStr = date.toISOString().split('T')[0];
-            historyFiles.push(dateStr);
+            if (!historyFiles.includes(dateStr)) {
+                historyFiles.push(dateStr);
+            }
         }
+
+        // 按日期排序
+        historyFiles.sort((a, b) => b.localeCompare(a));
 
         // 保存历史文件列表
         state.historyFiles = historyFiles;
@@ -504,7 +511,32 @@ function renderHistoryList() {
         return;
     }
 
-    elements.historyList.innerHTML = state.historyFiles.map(date => `
+    // 添加快速对比区域
+    let html = `
+        <div class="comparison-section" style="background: var(--bg-primary); padding: 20px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+            <h3 style="margin-bottom: 16px;">📊 快速对比</h3>
+            <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <label style="font-size: 14px; color: var(--text-secondary);">起始日期:</label>
+                    <select id="compareDate1" style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-left: 8px;">
+                        ${state.historyFiles.map(d => `<option value="${d}">${d}</option>`).join('')}
+                    </select>
+                </div>
+                <div>
+                    <label style="font-size: 14px; color: var(--text-secondary);">结束日期:</label>
+                    <select id="compareDate2" style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-left: 8px;">
+                        ${state.historyFiles.map(d => `<option value="${d}">${d}</option>`).join('')}
+                    </select>
+                </div>
+                <button class="btn-primary" onclick="compareSelectedDates()">
+                    对比变化
+                </button>
+            </div>
+        </div>
+    `;
+
+    // 历史列表
+    html += state.historyFiles.map(date => `
         <div class="history-card">
             <div class="history-date">${date}</div>
             <div class="history-actions">
@@ -514,6 +546,23 @@ function renderHistoryList() {
             </div>
         </div>
     `).join('');
+
+    elements.historyList.innerHTML = html;
+}
+
+/**
+ * 对比选中的日期
+ */
+function compareSelectedDates() {
+    const date1 = document.getElementById('compareDate1').value;
+    const date2 = document.getElementById('compareDate2').value;
+
+    if (date1 === date2) {
+        alert('请选择不同的日期进行对比');
+        return;
+    }
+
+    compareDates(date1, date2);
 }
 
 /**
@@ -594,6 +643,180 @@ function loadHistoryData() {
 }
 
 /**
+ * 对比两个日期的数据
+ */
+async function compareDates(date1, date2) {
+    try {
+        const [response1, response2] = await Promise.all([
+            fetch(`data/history/${date1}.json`),
+            fetch(`data/history/${date2}.json`)
+        ]);
+
+        if (!response1.ok || !response2.ok) {
+            throw new Error('历史数据不存在');
+        }
+
+        const data1 = await response1.json();
+        const data2 = await response2.json();
+
+        showComparisonModal(date1, data1, date2, data2);
+
+    } catch (error) {
+        console.error('对比数据失败:', error);
+        alert('无法加载历史数据进行对比');
+    }
+}
+
+/**
+ * 显示对比结果弹窗
+ */
+function showComparisonModal(date1, data1, date2, data2) {
+    const movies1 = Object.fromEntries(data1.movies.map(m => [m.title, m]));
+    const movies2 = Object.fromEntries(data2.movies.map(m => [m.title, m]));
+
+    const titles1 = new Set(Object.keys(movies1));
+    const titles2 = new Set(Object.keys(movies2));
+
+    // 新进入的电影
+    const entered = [...titles2].filter(t => !titles1.has(t)).map(t => movies2[t]);
+    entered.sort((a, b) => a.rank - b.rank);
+
+    // 掉出的电影
+    const exited = [...titles1].filter(t => !titles2.has(t)).map(t => movies1[t]);
+    exited.sort((a, b) => a.rank - b.rank);
+
+    // 排名变化
+    const rankChanges = [];
+    for (const title of titles1) {
+        if (titles2.has(title)) {
+            const rank1 = movies1[title].rank;
+            const rank2 = movies2[title].rank;
+            if (rank1 !== rank2) {
+                rankChanges.push({
+                    title: title,
+                    old_rank: rank1,
+                    new_rank: rank2,
+                    change: rank1 - rank2,
+                    rating: movies2[title].rating,
+                });
+            }
+        }
+    }
+    rankChanges.sort((a, b) => b.change - a.change);
+
+    const rankUp = rankChanges.filter(r => r.change > 0);
+    const rankDown = rankChanges.filter(r => r.change < 0);
+
+    // 生成HTML
+    let html = `
+        <h2 class="modal-title">${date1} vs ${date2} 变化对比</h2>
+        <div class="modal-info">
+            <div class="modal-info-item">
+                <span class="modal-info-label">新进入</span>
+                <span class="modal-info-value">${entered.length} 部</span>
+            </div>
+            <div class="modal-info-item">
+                <span class="modal-info-label">掉出</span>
+                <span class="modal-info-value">${exited.length} 部</span>
+            </div>
+            <div class="modal-info-item">
+                <span class="modal-info-label">排名上升</span>
+                <span class="modal-info-value">${rankUp.length} 部</span>
+            </div>
+            <div class="modal-info-item">
+                <span class="modal-info-label">排名下降</span>
+                <span class="modal-info-value">${rankDown.length} 部</span>
+            </div>
+        </div>
+    `;
+
+    if (entered.length > 0) {
+        html += `
+            <h3 style="margin: 20px 0 10px;">🆕 新进入榜单</h3>
+            <div style="max-height: 200px; overflow-y: auto;">
+                ${entered.slice(0, 10).map(m => `
+                    <div class="movie-item">
+                        <div class="movie-poster-small">
+                            <img src="${m.cover_url}" alt="${escapeHtml(m.title)}" loading="lazy"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                        </div>
+                        <div class="movie-info">
+                            <div class="movie-title">${escapeHtml(m.title)}</div>
+                            <div class="movie-meta">排名: #${m.rank} · ${m.year}</div>
+                        </div>
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i>
+                            ${m.rating}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    if (exited.length > 0) {
+        html += `
+            <h3 style="margin: 20px 0 10px;">📤 掉出榜单</h3>
+            <div style="max-height: 200px; overflow-y: auto;">
+                ${exited.slice(0, 10).map(m => `
+                    <div class="movie-item">
+                        <div class="movie-poster-small">
+                            <img src="${m.cover_url}" alt="${escapeHtml(m.title)}" loading="lazy"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                        </div>
+                        <div class="movie-info">
+                            <div class="movie-title">${escapeHtml(m.title)}</div>
+                            <div class="movie-meta">排名: #${m.rank} · ${m.year}</div>
+                        </div>
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i>
+                            ${m.rating}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    if (rankUp.length > 0) {
+        html += `
+            <h3 style="margin: 20px 0 10px;">📈 排名上升TOP10</h3>
+            <div style="max-height: 200px; overflow-y: auto;">
+                ${rankUp.slice(0, 10).map(r => `
+                    <div class="movie-item">
+                        <div class="movie-info">
+                            <div class="movie-title">${escapeHtml(r.title)}</div>
+                            <div class="movie-meta">排名: ${r.old_rank} → ${r.new_rank}</div>
+                        </div>
+                        <div class="rank-change up">↑${r.change}</div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    if (rankDown.length > 0) {
+        html += `
+            <h3 style="margin: 20px 0 10px;">📉 排名下降TOP10</h3>
+            <div style="max-height: 200px; overflow-y: auto;">
+                ${rankDown.slice(0, 10).map(r => `
+                    <div class="movie-item">
+                        <div class="movie-info">
+                            <div class="movie-title">${escapeHtml(r.title)}</div>
+                            <div class="movie-meta">排名: ${r.old_rank} → ${r.new_rank}</div>
+                        </div>
+                        <div class="rank-change down">↓${Math.abs(r.change)}</div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    elements.modalBody.innerHTML = html;
+    openModal();
+}
+
+/**
  * 绑定电影点击事件
  */
 function bindMovieClickEvents() {
@@ -671,6 +894,138 @@ function switchTab(tab) {
     elements.tabContents.forEach(content => {
         content.classList.toggle('active', content.id === `${tab}Tab`);
     });
+}
+
+/**
+ * 加载指定时间段的变化
+ */
+async function loadPeriodChanges() {
+    const period = document.getElementById('periodSelect').value;
+
+    if (period === 'latest') {
+        // 显示最新变化
+        renderChanges();
+        return;
+    }
+
+    // 加载指定日期的数据并与当前数据对比
+    try {
+        const response = await fetch(`data/history/${period}.json`);
+        if (!response.ok) {
+            throw new Error('历史数据不存在');
+        }
+
+        const historicalData = await response.json();
+        const currentData = state.currentData;
+
+        if (!currentData) {
+            alert('当前数据未加载');
+            return;
+        }
+
+        // 对比数据
+        const changes = compareData(historicalData, currentData);
+
+        // 更新显示
+        updateChangesDisplay(changes, period);
+
+    } catch (error) {
+        console.error('加载历史数据失败:', error);
+        alert('无法加载该时间段的历史数据');
+    }
+}
+
+/**
+ * 对比两个数据集
+ */
+function compareData(oldData, newData) {
+    const oldMovies = Object.fromEntries(oldData.movies.map(m => [m.title, m]));
+    const newMovies = Object.fromEntries(newData.movies.map(m => [m.title, m]));
+
+    const oldTitles = new Set(Object.keys(oldMovies));
+    const newTitles = new Set(Object.keys(newMovies));
+
+    // 新进入的电影
+    const entered = [...newTitles].filter(t => !oldTitles.has(t)).map(t => newMovies[t]);
+    entered.sort((a, b) => a.rank - b.rank);
+
+    // 掉出的电影
+    const exited = [...oldTitles].filter(t => !newTitles.has(t)).map(t => oldMovies[t]);
+    exited.sort((a, b) => a.rank - b.rank);
+
+    // 排名变化
+    const rankChanges = [];
+    for (const title of oldTitles) {
+        if (newTitles.has(title)) {
+            const oldRank = oldMovies[title].rank;
+            const newRank = newMovies[title].rank;
+            if (oldRank !== newRank) {
+                rankChanges.push({
+                    title: title,
+                    old_rank: oldRank,
+                    new_rank: newRank,
+                    change: oldRank - newRank,
+                    rating: newMovies[title].rating,
+                    cover_url: newMovies[title].cover_url,
+                    year: newMovies[title].year,
+                    region: newMovies[title].region,
+                    genre: newMovies[title].genre,
+                });
+            }
+        }
+    }
+    rankChanges.sort((a, b) => b.change - a.change);
+
+    return {
+        has_previous: true,
+        old_timestamp: oldData.timestamp,
+        new_timestamp: newData.timestamp,
+        entered: entered,
+        exited: exited,
+        rank_up: rankChanges.filter(r => r.change > 0),
+        rank_down: rankChanges.filter(r => r.change < 0),
+        total_changes: entered.length + exited.length + rankChanges.length,
+    };
+}
+
+/**
+ * 更新变化显示
+ */
+function updateChangesDisplay(changes, period) {
+    // 更新时间显示
+    elements.lastUpdate.textContent = `${period} 至今`;
+
+    // 更新统计数字
+    elements.newCount.textContent = changes.entered?.length || 0;
+    elements.exitCount.textContent = changes.exited?.length || 0;
+    elements.upCount.textContent = changes.rank_up?.length || 0;
+    elements.downCount.textContent = changes.rank_down?.length || 0;
+
+    // 更新徽章
+    elements.enteredBadge.textContent = changes.entered?.length || 0;
+    elements.exitedBadge.textContent = changes.exited?.length || 0;
+    elements.rankUpBadge.textContent = changes.rank_up?.length || 0;
+    elements.rankDownBadge.textContent = changes.rank_down?.length || 0;
+
+    // 更新列表
+    elements.enteredList.innerHTML = changes.entered?.length
+        ? changes.entered.map(m => createMovieItemHtml(m, 'entered')).join('')
+        : '<div class="empty-state">暂无新进入的电影</div>';
+
+    elements.exitedList.innerHTML = changes.exited?.length
+        ? changes.exited.map(m => createMovieItemHtml(m, 'exited')).join('')
+        : '<div class="empty-state">暂无掉出的电影</div>';
+
+    elements.rankUpList.innerHTML = changes.rank_up?.length
+        ? changes.rank_up.map(r => createRankChangeHtml(r, 'up')).join('')
+        : '<div class="empty-state">暂无排名上升的电影</div>';
+
+    elements.rankDownList.innerHTML = changes.rank_down?.length
+        ? changes.rank_down.map(r => createRankChangeHtml(r, 'down')).join('')
+        : '<div class="empty-state">暂无排名下降的电影</div>';
+
+    // 绑定点击事件
+    bindMovieClickEvents();
 }
 
 /**
