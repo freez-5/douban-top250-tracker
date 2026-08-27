@@ -24,6 +24,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'imdb')
 HISTORY_DIR = os.path.join(DATA_DIR, 'history')
+DOUBAN_DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'douban')
 
 # 确保目录存在
 os.makedirs(HISTORY_DIR, exist_ok=True)
@@ -35,6 +36,37 @@ BASICS_URL = 'https://datasets.imdbws.com/title.basics.tsv.gz'
 # IMDB Top 250 参数
 MIN_VOTES = 25000  # 最低投票数
 TOP_N = 250        # 取前 N 名
+
+
+def load_douban_title_mapping():
+    """
+    加载豆瓣数据，建立英文名到中文名的映射
+    返回: {英文名: 中文名} 字典
+    """
+    mapping = {}
+    douban_current = os.path.join(DOUBAN_DATA_DIR, 'current.json')
+
+    if os.path.exists(douban_current):
+        try:
+            with open(douban_current, 'r', encoding='utf-8') as f:
+                douban_data = json.load(f)
+                for movie in douban_data.get('movies', []):
+                    chinese_title = movie.get('title', '')
+                    english_title = movie.get('original_title', '')
+
+                    # 如果有英文名，建立映射
+                    if english_title and chinese_title:
+                        mapping[english_title.lower()] = chinese_title
+
+                    # 也用中文名映射（有些电影中文名就是主标题）
+                    if chinese_title:
+                        mapping[chinese_title.lower()] = chinese_title
+
+            print(f"  加载了 {len(douban_data.get('movies', []))} 部豆瓣电影的标题映射")
+        except Exception as e:
+            print(f"  加载豆瓣数据失败: {e}")
+
+    return mapping
 
 
 def download_tsv(url, description):
@@ -84,6 +116,10 @@ def parse_imdb_top250():
     """
     print("开始计算 IMDB Top 250...")
     print()
+
+    # 0. 加载豆瓣标题映射
+    print("  加载豆瓣标题映射...")
+    title_mapping = load_douban_title_mapping()
 
     # 1. 下载评分数据
     ratings_data = download_tsv(RATINGS_URL, "评分数据")
@@ -171,6 +207,7 @@ def parse_imdb_top250():
 
     # 6. 构建最终数据
     movies = []
+    matched_count = 0
     for rank, movie in enumerate(top_250, 1):
         basic = movie['basic']
         tconst = movie['tconst']
@@ -189,6 +226,22 @@ def parse_imdb_top250():
             genres = ''
         genre = genres.replace(',', ' ')
 
+        # 查找中文名
+        chinese_title = None
+        # 1. 先用英文名查找
+        if original_title.lower() in title_mapping:
+            chinese_title = title_mapping[original_title.lower()]
+        # 2. 再用主标题查找
+        elif title.lower() in title_mapping:
+            chinese_title = title_mapping[title.lower()]
+
+        # 如果找到中文名，设置 title 为中文名，original_title 为英文名
+        if chinese_title:
+            display_title = chinese_title
+            matched_count += 1
+        else:
+            display_title = title
+
         # 构建 IMDB URL
         imdb_url = f"https://www.imdb.com/title/{tconst}/"
 
@@ -197,7 +250,7 @@ def parse_imdb_top250():
 
         movies.append({
             'rank': rank,
-            'title': title,
+            'title': display_title,
             'original_title': original_title,
             'other_info': '',
             'rating': round(movie['weighted_rating'], 1),
@@ -214,6 +267,7 @@ def parse_imdb_top250():
         })
 
     print(f"\n成功计算 {len(movies)} 部电影")
+    print(f"匹配到中文名: {matched_count} 部")
     return movies
 
 

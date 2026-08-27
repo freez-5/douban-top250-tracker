@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-27T18:48:44.053798",
+  "timestamp": "2026-08-27T19:11:29.125142",
   "count": 250,
   "movies": [
     {
       "rank": 1,
-      "title": "The Shawshank Redemption",
+      "title": "肖申克的救赎",
       "original_title": "The Shawshank Redemption",
       "other_info": "",
       "rating": 9.3,
@@ -21,7 +21,7 @@
     },
     {
       "rank": 2,
-      "title": "The Godfather",
+      "title": "教父",
       "original_title": "The Godfather",
       "other_info": "",
       "rating": 9.2,
@@ -38,7 +38,7 @@
     },
     {
       "rank": 3,
-      "title": "The Dark Knight",
+      "title": "蝙蝠侠：黑暗骑士",
       "original_title": "The Dark Knight",
       "other_info": "",
       "rating": 9.1,
@@ -55,7 +55,7 @@
     },
     {
       "rank": 4,
-      "title": "The Lord of the Rings: The Return of the King",
+      "title": "指环王3：王者无敌",
       "original_title": "The Lord of the Rings: The Return of the King",
       "other_info": "",
       "rating": 9.0,
@@ -72,7 +72,7 @@
     },
     {
       "rank": 5,
-      "title": "Schindler's List",
+      "title": "辛德勒的名单",
       "original_title": "Schindler's List",
       "other_info": "",
       "rating": 9.0,
@@ -106,7 +106,7 @@
     },
     {
       "rank": 7,
-      "title": "12 Angry Men",
+      "title": "十二怒汉",
       "original_title": "12 Angry Men",
       "other_info": "",
       "rating": 8.9,
@@ -123,7 +123,7 @@
     },
     {
       "rank": 8,
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "title": "指环王1：护戒使者",
       "original_title": "The Lord of the Rings: The Fellowship of the Ring",
       "other_info": "",
       "rating": 8.9,
@@ -140,7 +140,7 @@
     },
     {
       "rank": 9,
-      "title": "Inception",
+      "title": "盗梦空间",
       "original_title": "Inception",
       "other_info": "",
       "rating": 8.8,
@@ -157,7 +157,7 @@
     },
     {
       "rank": 10,
-      "title": "Fight Club",
+      "title": "搏击俱乐部",
       "original_title": "Fight Club",
       "other_info": "",
       "rating": 8.8,
@@ -174,7 +174,7 @@
     },
     {
       "rank": 11,
-      "title": "Forrest Gump",
+      "title": "阿甘正传",
       "original_title": "Forrest Gump",
       "other_info": "",
       "rating": 8.8,
@@ -191,7 +191,7 @@
     },
     {
       "rank": 12,
-      "title": "Pulp Fiction",
+      "title": "低俗小说",
       "original_title": "Pulp Fiction",
       "other_info": "",
       "rating": 8.8,
@@ -208,7 +208,7 @@
     },
     {
       "rank": 13,
-      "title": "The Lord of the Rings: The Two Towers",
+      "title": "指环王2：双塔奇兵",
       "original_title": "The Lord of the Rings: The Two Towers",
       "other_info": "",
       "rating": 8.8,
@@ -242,7 +242,7 @@
     },
     {
       "rank": 15,
-      "title": "Interstellar",
+      "title": "星际穿越",
       "original_title": "Interstellar",
       "other_info": "",
       "rating": 8.7,
@@ -259,7 +259,7 @@
     },
     {
       "rank": 16,
-      "title": "The Matrix",
+      "title": "黑客帝国",
       "original_title": "The Matrix",
       "other_info": "",
       "rating": 8.7,
@@ -310,7 +310,7 @@
     },
     {
       "rank": 19,
-      "title": "Seven",
+      "title": "七宗罪",
       "original_title": "Se7en",
       "other_info": "",
       "rating": 8.6,
@@ -327,7 +327,7 @@
     },
     {
       "rank": 20,
-      "title": "The Silence of the Lambs",
+      "title": "沉默的羔羊",
       "original_title": "The Silence of the Lambs",
       "other_info": "",
       "rating": 8.6,
@@ -344,7 +344,7 @@
     },
     {
       "rank": 21,
-      "title": "Saving Private Ryan",
+      "title": "拯救大兵瑞恩",
       "original_title": "Saving Private Ryan",
       "other_info": "",
       "rating": 8.6,
@@ -378,7 +378,7 @@
     },
     {
       "rank": 23,
-      "title": "The Green Mile",
+      "title": "绿里奇迹",
       "original_title": "The Green Mile",
       "other_info": "",
       "rating": 8.6,
@@ -395,7 +395,7 @@
     },
     {
       "rank": 24,
-      "title": "Terminator 2: Judgment Day",
+      "title": "终结者2：审判日",
       "original_title": "Terminator 2: Judgment Day",
       "other_info": "",
       "rating": 8.6,
@@ -412,7 +412,7 @@
     },
     {
       "rank": 25,
-      "title": "One Flew Over the Cuckoo's Nest",
+      "title": "飞越疯人院",
       "original_title": "One Flew Over the Cuckoo's Nest",
       "other_info": "",
       "rating": 8.6,
@@ -446,7 +446,7 @@
     },
     {
       "rank": 27,
-      "title": "City of God",
+      "title": "上帝之城",
       "original_title": "Cidade de Deus",
       "other_info": "",
       "rating": 8.5,
@@ -463,7 +463,7 @@
     },
     {
       "rank": 28,
-      "title": "Life Is Beautiful",
+      "title": "美丽人生",
       "original_title": "La vita è bella",
       "other_info": "",
       "rating": 8.5,
@@ -514,7 +514,7 @@
     },
     {
       "rank": 31,
-      "title": "Django Unchained",
+      "title": "被解救的姜戈",
       "original_title": "Django Unchained",
       "other_info": "",
       "rating": 8.5,
@@ -548,7 +548,7 @@
     },
     {
       "rank": 33,
-      "title": "The Prestige",
+      "title": "致命魔术",
       "original_title": "The Prestige",
       "other_info": "",
       "rating": 8.5,
@@ -599,7 +599,7 @@
     },
     {
       "rank": 36,
-      "title": "Léon: The Professional",
+      "title": "这个杀手不太冷",
       "original_title": "Léon",
       "other_info": "",
       "rating": 8.5,
@@ -633,7 +633,7 @@
     },
     {
       "rank": 38,
-      "title": "The Lion King",
+      "title": "狮子王",
       "original_title": "The Lion King",
       "other_info": "",
       "rating": 8.5,
@@ -684,7 +684,7 @@
     },
     {
       "rank": 41,
-      "title": "Whiplash",
+      "title": "爆裂鼓手",
       "original_title": "Whiplash",
       "other_info": "",
       "rating": 8.5,
@@ -701,7 +701,7 @@
     },
     {
       "rank": 42,
-      "title": "The Intouchables",
+      "title": "触不可及",
       "original_title": "Intouchables",
       "other_info": "",
       "rating": 8.5,
@@ -718,7 +718,7 @@
     },
     {
       "rank": 43,
-      "title": "The Pianist",
+      "title": "钢琴家",
       "original_title": "The Pianist",
       "other_info": "",
       "rating": 8.5,
@@ -752,7 +752,7 @@
     },
     {
       "rank": 45,
-      "title": "Psycho",
+      "title": "惊魂记",
       "original_title": "Psycho",
       "other_info": "",
       "rating": 8.4,
@@ -905,7 +905,7 @@
     },
     {
       "rank": 54,
-      "title": "The Dark Knight Rises",
+      "title": "蝙蝠侠：黑暗骑士崛起",
       "original_title": "The Dark Knight Rises",
       "other_info": "",
       "rating": 8.4,
@@ -922,7 +922,7 @@
     },
     {
       "rank": 55,
-      "title": "Inglourious Basterds",
+      "title": "无耻混蛋",
       "original_title": "Inglourious Basterds",
       "other_info": "",
       "rating": 8.4,
@@ -956,7 +956,7 @@
     },
     {
       "rank": 57,
-      "title": "Memento",
+      "title": "记忆碎片",
       "original_title": "Memento",
       "other_info": "",
       "rating": 8.4,
@@ -990,7 +990,7 @@
     },
     {
       "rank": 59,
-      "title": "Cinema Paradiso",
+      "title": "天堂电影院",
       "original_title": "Nuovo Cinema Paradiso",
       "other_info": "",
       "rating": 8.4,
@@ -1007,7 +1007,7 @@
     },
     {
       "rank": 60,
-      "title": "WALL·E",
+      "title": "机器人总动员",
       "original_title": "WALL·E",
       "other_info": "",
       "rating": 8.4,
@@ -1041,7 +1041,7 @@
     },
     {
       "rank": 62,
-      "title": "Good Will Hunting",
+      "title": "心灵捕手",
       "original_title": "Good Will Hunting",
       "other_info": "",
       "rating": 8.4,
@@ -1092,7 +1092,7 @@
     },
     {
       "rank": 65,
-      "title": "Modern Times",
+      "title": "摩登时代",
       "original_title": "Modern Times",
       "other_info": "",
       "rating": 8.4,
@@ -1126,7 +1126,7 @@
     },
     {
       "rank": 67,
-      "title": "Spider-Man: Into the Spider-Verse",
+      "title": "蜘蛛侠：平行宇宙",
       "original_title": "Spider-Man: Into the Spider-Verse",
       "other_info": "",
       "rating": 8.3,
@@ -1177,7 +1177,7 @@
     },
     {
       "rank": 70,
-      "title": "Coco",
+      "title": "寻梦环游记",
       "original_title": "Coco",
       "other_info": "",
       "rating": 8.3,
@@ -1211,7 +1211,7 @@
     },
     {
       "rank": 72,
-      "title": "3 Idiots",
+      "title": "三傻大闹宝莱坞",
       "original_title": "3 Idiots",
       "other_info": "",
       "rating": 8.3,
@@ -1245,7 +1245,7 @@
     },
     {
       "rank": 74,
-      "title": "City Lights",
+      "title": "城市之光",
       "original_title": "City Lights",
       "other_info": "",
       "rating": 8.3,
@@ -1262,7 +1262,7 @@
     },
     {
       "rank": 75,
-      "title": "The Lives of Others",
+      "title": "窃听风暴",
       "original_title": "Das Leben der Anderen",
       "other_info": "",
       "rating": 8.3,
@@ -1313,7 +1313,7 @@
     },
     {
       "rank": 78,
-      "title": "Joker",
+      "title": "小丑",
       "original_title": "Joker",
       "other_info": "",
       "rating": 8.3,
@@ -1347,7 +1347,7 @@
     },
     {
       "rank": 80,
-      "title": "Up",
+      "title": "飞屋环游记",
       "original_title": "Up",
       "other_info": "",
       "rating": 8.3,
@@ -1415,7 +1415,7 @@
     },
     {
       "rank": 84,
-      "title": "Braveheart",
+      "title": "勇敢的心",
       "original_title": "Braveheart",
       "other_info": "",
       "rating": 8.3,
@@ -1449,7 +1449,7 @@
     },
     {
       "rank": 86,
-      "title": "Toy Story 3",
+      "title": "玩具总动员3",
       "original_title": "Toy Story 3",
       "other_info": "",
       "rating": 8.3,
@@ -1534,7 +1534,7 @@
     },
     {
       "rank": 91,
-      "title": "2001: A Space Odyssey",
+      "title": "2001太空漫游",
       "original_title": "2001: A Space Odyssey",
       "other_info": "",
       "rating": 8.3,
@@ -1636,7 +1636,7 @@
     },
     {
       "rank": 97,
-      "title": "The Hunt",
+      "title": "狩猎",
       "original_title": "Jagten",
       "other_info": "",
       "rating": 8.2,
@@ -1653,7 +1653,7 @@
     },
     {
       "rank": 98,
-      "title": "Once Upon a Time in America",
+      "title": "美国往事",
       "original_title": "C'era una volta in America",
       "other_info": "",
       "rating": 8.2,
@@ -1755,7 +1755,7 @@
     },
     {
       "rank": 104,
-      "title": "Shutter Island",
+      "title": "禁闭岛",
       "original_title": "Shutter Island",
       "other_info": "",
       "rating": 8.2,
@@ -1772,7 +1772,7 @@
     },
     {
       "rank": 105,
-      "title": "Witness for the Prosecution",
+      "title": "控方证人",
       "original_title": "Witness for the Prosecution",
       "other_info": "",
       "rating": 8.2,
@@ -1789,7 +1789,7 @@
     },
     {
       "rank": 106,
-      "title": "The Truman Show",
+      "title": "楚门的世界",
       "original_title": "The Truman Show",
       "other_info": "",
       "rating": 8.2,
@@ -1840,7 +1840,7 @@
     },
     {
       "rank": 109,
-      "title": "Singin' in the Rain",
+      "title": "雨中曲",
       "original_title": "Singin' in the Rain",
       "other_info": "",
       "rating": 8.2,
@@ -1925,7 +1925,7 @@
     },
     {
       "rank": 114,
-      "title": "The Sixth Sense",
+      "title": "第六感",
       "original_title": "The Sixth Sense",
       "other_info": "",
       "rating": 8.2,
@@ -1976,7 +1976,7 @@
     },
     {
       "rank": 117,
-      "title": "A Beautiful Mind",
+      "title": "美丽心灵",
       "original_title": "A Beautiful Mind",
       "other_info": "",
       "rating": 8.2,
@@ -2146,7 +2146,7 @@
     },
     {
       "rank": 127,
-      "title": "Amélie",
+      "title": "天使爱美丽",
       "original_title": "Le Fabuleux Destin d'Amélie Poulain",
       "other_info": "",
       "rating": 8.2,
@@ -2180,7 +2180,7 @@
     },
     {
       "rank": 129,
-      "title": "Dangal",
+      "title": "摔跤吧！爸爸",
       "original_title": "Dangal",
       "other_info": "",
       "rating": 8.2,
@@ -2231,7 +2231,7 @@
     },
     {
       "rank": 132,
-      "title": "Green Book",
+      "title": "绿皮书",
       "original_title": "Green Book",
       "other_info": "",
       "rating": 8.1,
@@ -2486,7 +2486,7 @@
     },
     {
       "rank": 147,
-      "title": "Gone with the Wind",
+      "title": "乱世佳人",
       "original_title": "Gone with the Wind",
       "other_info": "",
       "rating": 8.1,
@@ -2639,7 +2639,7 @@
     },
     {
       "rank": 156,
-      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "title": "加勒比海盗",
       "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
       "other_info": "",
       "rating": 8.1,
@@ -2673,7 +2673,7 @@
     },
     {
       "rank": 158,
-      "title": "Catch Me If You Can",
+      "title": "猫鼠游戏",
       "original_title": "Catch Me If You Can",
       "other_info": "",
       "rating": 8.1,
@@ -2707,7 +2707,7 @@
     },
     {
       "rank": 160,
-      "title": "Mad Max: Fury Road",
+      "title": "疯狂的麦克斯4：狂暴之路",
       "original_title": "Mad Max: Fury Road",
       "other_info": "",
       "rating": 8.1,
@@ -2724,7 +2724,7 @@
     },
     {
       "rank": 161,
-      "title": "Gone Girl",
+      "title": "消失的爱人",
       "original_title": "Gone Girl",
       "other_info": "",
       "rating": 8.1,
@@ -2741,7 +2741,7 @@
     },
     {
       "rank": 162,
-      "title": "Monsters, Inc.",
+      "title": "怪兽电力公司",
       "original_title": "Monsters, Inc.",
       "other_info": "",
       "rating": 8.1,
@@ -2775,7 +2775,7 @@
     },
     {
       "rank": 164,
-      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "title": "哈利·波特与死亡圣器(下)",
       "original_title": "Harry Potter and the Deathly Hallows: Part 2",
       "other_info": "",
       "rating": 8.1,
@@ -2809,7 +2809,7 @@
     },
     {
       "rank": 166,
-      "title": "The Grand Budapest Hotel",
+      "title": "布达佩斯大饭店",
       "original_title": "The Grand Budapest Hotel",
       "other_info": "",
       "rating": 8.1,
@@ -2860,7 +2860,7 @@
     },
     {
       "rank": 169,
-      "title": "Inside Out",
+      "title": "头脑特工队",
       "original_title": "Inside Out",
       "other_info": "",
       "rating": 8.1,
@@ -2911,7 +2911,7 @@
     },
     {
       "rank": 172,
-      "title": "How to Train Your Dragon",
+      "title": "驯龙高手",
       "original_title": "How to Train Your Dragon",
       "other_info": "",
       "rating": 8.1,
@@ -3166,7 +3166,7 @@
     },
     {
       "rank": 187,
-      "title": "Hacksaw Ridge",
+      "title": "血战钢锯岭",
       "original_title": "Hacksaw Ridge",
       "other_info": "",
       "rating": 8.1,
@@ -3183,7 +3183,7 @@
     },
     {
       "rank": 188,
-      "title": "Dead Poets Society",
+      "title": "死亡诗社",
       "original_title": "Dead Poets Society",
       "other_info": "",
       "rating": 8.0,
@@ -3200,7 +3200,7 @@
     },
     {
       "rank": 189,
-      "title": "Lock, Stock and Two Smoking Barrels",
+      "title": "两杆大烟枪",
       "original_title": "Lock, Stock and Two Smoking Barrels",
       "other_info": "",
       "rating": 8.0,
@@ -3217,7 +3217,7 @@
     },
     {
       "rank": 190,
-      "title": "Three Billboards Outside Ebbing, Missouri",
+      "title": "三块广告牌",
       "original_title": "Three Billboards Outside Ebbing, Missouri",
       "other_info": "",
       "rating": 8.0,
@@ -3404,7 +3404,7 @@
     },
     {
       "rank": 201,
-      "title": "Room",
+      "title": "房间",
       "original_title": "Room",
       "other_info": "",
       "rating": 8.0,
@@ -3489,7 +3489,7 @@
     },
     {
       "rank": 206,
-      "title": "Hotel Rwanda",
+      "title": "卢旺达饭店",
       "original_title": "Hotel Rwanda",
       "other_info": "",
       "rating": 8.0,
@@ -3540,7 +3540,7 @@
     },
     {
       "rank": 209,
-      "title": "Before Sunrise",
+      "title": "爱在黎明破晓前",
       "original_title": "Before Sunrise",
       "other_info": "",
       "rating": 8.0,
@@ -3608,7 +3608,7 @@
     },
     {
       "rank": 213,
-      "title": "Hachi: A Dog's Tale",
+      "title": "忠犬八公的故事",
       "original_title": "Hachi: A Dog's Tale",
       "other_info": "",
       "rating": 8.0,
@@ -3659,7 +3659,7 @@
     },
     {
       "rank": 216,
-      "title": "Before Sunset",
+      "title": "爱在日落黄昏时",
       "original_title": "Before Sunset",
       "other_info": "",
       "rating": 8.0,
@@ -3693,7 +3693,7 @@
     },
     {
       "rank": 218,
-      "title": "The Sound of Music",
+      "title": "音乐之声",
       "original_title": "The Sound of Music",
       "other_info": "",
       "rating": 8.0,
@@ -3897,7 +3897,7 @@
     },
     {
       "rank": 230,
-      "title": "Titanic",
+      "title": "泰坦尼克号",
       "original_title": "Titanic",
       "other_info": "",
       "rating": 8.0,
@@ -4016,7 +4016,7 @@
     },
     {
       "rank": 237,
-      "title": "The Martian",
+      "title": "火星救援",
       "original_title": "The Martian",
       "other_info": "",
       "rating": 8.0,
@@ -4033,7 +4033,7 @@
     },
     {
       "rank": 238,
-      "title": "Wild Tales",
+      "title": "荒蛮故事",
       "original_title": "Relatos salvajes",
       "other_info": "",
       "rating": 8.0,
@@ -4118,7 +4118,7 @@
     },
     {
       "rank": 243,
-      "title": "Slumdog Millionaire",
+      "title": "贫民窟的百万富翁",
       "original_title": "Slumdog Millionaire",
       "other_info": "",
       "rating": 8.0,
@@ -4169,7 +4169,7 @@
     },
     {
       "rank": 246,
-      "title": "Black Swan",
+      "title": "黑天鹅",
       "original_title": "Black Swan",
       "other_info": "",
       "rating": 8.0,
@@ -4186,7 +4186,7 @@
     },
     {
       "rank": 247,
-      "title": "The Imitation Game",
+      "title": "模仿游戏",
       "original_title": "The Imitation Game",
       "other_info": "",
       "rating": 8.0,
