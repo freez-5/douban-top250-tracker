@@ -305,6 +305,7 @@ def compare_data(old_data, new_data):
         if change != 0:
             item = {
                 'title': title,
+                'original_title': new_dict[title].get('original_title', ''),
                 'old_rank': old_rank,
                 'new_rank': new_rank,
                 'change': change,

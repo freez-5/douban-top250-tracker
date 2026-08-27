@@ -363,6 +363,7 @@ function createMovieItemHtml(movie, type) {
             </div>
             <div class="movie-info">
                 <div class="movie-title">${escapeHtml(movie.title)}</div>
+                ${movie.original_title && movie.original_title !== movie.title ? `<div class="movie-original-title">${escapeHtml(movie.original_title)}</div>` : ''}
                 <div class="movie-meta">${movie.year} · ${movie.region} · ${movie.genre}</div>
             </div>
             <div class="movie-rating">
@@ -384,6 +385,7 @@ function createRankChangeHtml(change, type) {
         <div class="movie-item" data-title="${escapeHtml(change.title)}">
             <div class="movie-info">
                 <div class="movie-title">${escapeHtml(change.title)}</div>
+                ${change.original_title && change.original_title !== change.title ? `<div class="movie-original-title">${escapeHtml(change.original_title)}</div>` : ''}
                 <div class="movie-meta">
                     排名: ${change.old_rank} → ${change.new_rank}
                 </div>
@@ -703,6 +705,7 @@ function showHistoryModal(date, data) {
                     <div class="movie-rank">${m.rank}</div>
                     <div class="movie-info">
                         <div class="movie-title">${escapeHtml(m.title)}</div>
+                        ${m.original_title && m.original_title !== m.title ? `<div class="movie-original-title">${escapeHtml(m.original_title)}</div>` : ''}
                         <div class="movie-meta">${m.year} · ${m.director}</div>
                     </div>
                     <div class="movie-rating">
@@ -830,6 +833,7 @@ function showComparisonModal(date1, data1, date2, data2) {
                         </div>
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(m.title)}</div>
+                            ${m.original_title && m.original_title !== m.title ? `<div class="movie-original-title">${escapeHtml(m.original_title)}</div>` : ''}
                             <div class="movie-meta">排名: #${m.rank} · ${m.year}</div>
                         </div>
                         <div class="movie-rating">
@@ -854,6 +858,7 @@ function showComparisonModal(date1, data1, date2, data2) {
                         </div>
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(m.title)}</div>
+                            ${m.original_title && m.original_title !== m.title ? `<div class="movie-original-title">${escapeHtml(m.original_title)}</div>` : ''}
                             <div class="movie-meta">排名: #${m.rank} · ${m.year}</div>
                         </div>
                         <div class="movie-rating">
@@ -874,6 +879,7 @@ function showComparisonModal(date1, data1, date2, data2) {
                     <div class="movie-item">
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(r.title)}</div>
+                            ${r.original_title && r.original_title !== r.title ? `<div class="movie-original-title">${escapeHtml(r.original_title)}</div>` : ''}
                             <div class="movie-meta">排名: ${r.old_rank} → ${r.new_rank}</div>
                         </div>
                         <div class="rank-change up">↑${r.change}</div>
@@ -891,6 +897,7 @@ function showComparisonModal(date1, data1, date2, data2) {
                     <div class="movie-item">
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(r.title)}</div>
+                            ${r.original_title && r.original_title !== r.title ? `<div class="movie-original-title">${escapeHtml(r.original_title)}</div>` : ''}
                             <div class="movie-meta">排名: ${r.old_rank} → ${r.new_rank}</div>
                         </div>
                         <div class="rank-change down">↓${Math.abs(r.change)}</div>
@@ -1054,6 +1061,7 @@ function compareData(oldData, newData) {
             if (oldRank !== newRank) {
                 rankChanges.push({
                     title: title,
+                    original_title: newMovies[title].original_title || '',
                     old_rank: oldRank,
                     new_rank: newRank,
                     change: oldRank - newRank,

@@ -4252,15 +4252,5 @@
       "cover_url": "https://m.media-amazon.com/images/M/tt0401792.jpg",
       "tconst": "tt0401792"
     }
-  ],
-  "changes": {
-    "has_previous": true,
-    "old_timestamp": "2026-08-27T19:11:29.125142",
-    "new_timestamp": "2026-08-28T00:50:14.551149",
-    "entered": [],
-    "exited": [],
-    "rank_up": [],
-    "rank_down": [],
-    "total_changes": 0
-  }
+  ]
 }

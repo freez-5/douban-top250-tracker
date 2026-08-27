@@ -30,7 +30,7 @@ HEADERS = {
 # 路径配置
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
+DATA_DIR = os.path.join(PROJECT_DIR, "data", "douban")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
 CURRENT_FILE = os.path.join(DATA_DIR, "current.json")
 
@@ -277,6 +277,7 @@ def compare_data(old_data: dict, new_data: dict) -> dict:
         if old_rank != new_rank:
             rank_changes.append({
                 "title": title,
+                "original_title": new_movies[title].get('original_title', ''),
                 "old_rank": old_rank,
                 "new_rank": new_rank,
                 "change": old_rank - new_rank,  # 正数表示上升，负数表示下降

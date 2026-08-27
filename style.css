@@ -627,6 +627,12 @@ body {
     margin-bottom: 8px;
 }
 
+.movie-original-title {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
 .ranking-meta {
     display: flex;
     gap: 16px;
