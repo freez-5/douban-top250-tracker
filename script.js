@@ -1,5 +1,5 @@
 /**
- * 豆瓣Top 250变化追踪器 - 主脚本
+ * Top 250 变化追踪器 - 主脚本
  */
 
 // 全局状态
@@ -7,6 +7,7 @@ const state = {
     currentData: null,
     historyData: {},
     currentTab: 'changes',
+    currentSource: 'douban', // 'douban' | 'imdb'
     currentPage: 1,
     pageSize: 25,
     sortBy: 'rank',
@@ -17,6 +18,28 @@ const state = {
 
 // DOM元素缓存
 const elements = {};
+
+// 数据源配置
+const SOURCE_CONFIG = {
+    douban: {
+        name: '豆瓣',
+        dataPath: 'data/douban/current.json',
+        historyPath: 'data/douban/history/',
+        linkField: 'douban_url',
+        linkText: '在豆瓣查看',
+        footerText: '数据来源: 豆瓣电影 | 每周自动更新',
+        themeColor: '#00b51d',
+    },
+    imdb: {
+        name: 'IMDB',
+        dataPath: 'data/imdb/current.json',
+        historyPath: 'data/imdb/history/',
+        linkField: 'imdb_url',
+        linkText: '在IMDB查看',
+        footerText: '数据来源: IMDB | 每周自动更新',
+        themeColor: '#f5c518',
+    }
+};
 
 /**
  * 初始化应用
@@ -78,6 +101,11 @@ function cacheElements() {
  * 绑定事件
  */
 function bindEvents() {
+    // 数据源切换
+    document.querySelectorAll('.source-tab').forEach(btn => {
+        btn.addEventListener('click', () => switchSource(btn.dataset.source));
+    });
+
     // 标签页切换
     elements.navBtns.forEach(btn => {
         btn.addEventListener('click', () => switchTab(btn.dataset.tab));
@@ -123,14 +151,43 @@ function bindEvents() {
 }
 
 /**
+ * 切换数据源
+ */
+function switchSource(source) {
+    if (source === state.currentSource) return;
+
+    state.currentSource = source;
+
+    // 更新 HTML 属性
+    document.documentElement.setAttribute('data-source', source);
+
+    // 更新按钮状态
+    document.querySelectorAll('.source-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.source === source);
+    });
+
+    // 更新页脚
+    const config = SOURCE_CONFIG[source];
+    document.getElementById('footerSource').textContent = config.footerText;
+
+    // 更新页面标题
+    document.title = `${config.name} Top 250 变化追踪器`;
+
+    // 重新加载数据
+    loadData();
+}
+
+/**
  * 加载数据
  */
 async function loadData() {
     showLoading();
 
     try {
+        const config = SOURCE_CONFIG[state.currentSource];
+
         // 加载当前数据
-        const response = await fetch('data/current.json');
+        const response = await fetch(config.dataPath);
         if (!response.ok) {
             throw new Error('无法加载数据文件');
         }
@@ -155,12 +212,19 @@ async function loadData() {
  */
 async function loadHistoryList() {
     try {
-        // 预定义的历史文件列表（包括模拟的七月和八月数据）
-        const historyFiles = [
-            '2025-07-01',
-            '2025-08-01',
-            '2026-08-23',
-        ];
+        // 根据数据源加载不同的历史文件列表
+        const config = SOURCE_CONFIG[state.currentSource];
+
+        // 预定义的历史文件列表
+        let historyFiles = [];
+
+        if (state.currentSource === 'douban') {
+            // 豆瓣的历史数据
+            historyFiles = ['2025-07-01', '2025-08-01', '2026-08-23'];
+        } else {
+            // IMDB 的历史数据
+            historyFiles = ['2026-08-27'];
+        }
 
         // 尝试加载最近30天的历史数据
         const today = new Date();
@@ -179,10 +243,32 @@ async function loadHistoryList() {
         // 保存历史文件列表
         state.historyFiles = historyFiles;
 
+        // 更新时间段选择器
+        updatePeriodSelector();
+
     } catch (error) {
         console.error('加载历史列表失败:', error);
         state.historyFiles = [];
     }
+}
+
+/**
+ * 更新时间段选择器
+ */
+function updatePeriodSelector() {
+    const periodSelect = document.getElementById('periodSelect');
+    if (!periodSelect) return;
+
+    // 清空现有选项
+    periodSelect.innerHTML = '<option value="latest">最新变化</option>';
+
+    // 添加历史日期选项
+    state.historyFiles.forEach(date => {
+        const option = document.createElement('option');
+        option.value = date;
+        option.textContent = date;
+        periodSelect.appendChild(option);
+    });
 }
 
 /**
@@ -570,7 +656,8 @@ function compareSelectedDates() {
  */
 async function loadHistoryByDate(date) {
     try {
-        const response = await fetch(`data/history/${date}.json`);
+        const config = SOURCE_CONFIG[state.currentSource];
+        const response = await fetch(`${config.historyPath}${date}.json`);
         if (!response.ok) {
             throw new Error('历史数据不存在');
         }
@@ -647,9 +734,10 @@ function loadHistoryData() {
  */
 async function compareDates(date1, date2) {
     try {
+        const config = SOURCE_CONFIG[state.currentSource];
         const [response1, response2] = await Promise.all([
-            fetch(`data/history/${date1}.json`),
-            fetch(`data/history/${date2}.json`)
+            fetch(`${config.historyPath}${date1}.json`),
+            fetch(`${config.historyPath}${date2}.json`)
         ]);
 
         if (!response1.ok || !response2.ok) {
@@ -835,11 +923,14 @@ function showMovieDetail(title) {
     const movie = state.currentData.movies.find(m => m.title === title);
     if (!movie) return;
 
+    const config = SOURCE_CONFIG[state.currentSource];
+    const linkUrl = movie[config.linkField];
+
     elements.modalBody.innerHTML = `
         ${movie.cover_url ? `<img class="modal-poster" src="${movie.cover_url}" alt="${escapeHtml(movie.title)}"
             onerror="this.style.display='none'">` : ''}
         <h2 class="modal-title">${escapeHtml(movie.title)}</h2>
-        ${movie.original_title ? `<div class="modal-original-title">${escapeHtml(movie.original_title)}</div>` : ''}
+        ${movie.original_title && movie.original_title !== movie.title ? `<div class="modal-original-title">${escapeHtml(movie.original_title)}</div>` : ''}
         <div class="modal-rating">
             <span class="modal-rating-score">${movie.rating}</span>
             <span class="modal-rating-count">${formatNumber(movie.rating_count)} 人评价</span>
@@ -853,26 +944,26 @@ function showMovieDetail(title) {
                 <span class="modal-info-label">年份</span>
                 <span class="modal-info-value">${movie.year}</span>
             </div>
-            <div class="modal-info-item">
+            ${movie.region ? `<div class="modal-info-item">
                 <span class="modal-info-label">地区</span>
                 <span class="modal-info-value">${movie.region}</span>
-            </div>
+            </div>` : ''}
             <div class="modal-info-item">
                 <span class="modal-info-label">类型</span>
-                <span class="modal-info-value">${movie.genre}</span>
+                <span class="modal-info-value">${movie.genre || '未知'}</span>
             </div>
-            <div class="modal-info-item">
+            ${movie.director ? `<div class="modal-info-item">
                 <span class="modal-info-label">导演</span>
                 <span class="modal-info-value">${escapeHtml(movie.director)}</span>
-            </div>
-            <div class="modal-info-item">
+            </div>` : ''}
+            ${movie.actors && movie.actors.length > 0 ? `<div class="modal-info-item">
                 <span class="modal-info-label">主演</span>
                 <span class="modal-info-value">${movie.actors.map(a => escapeHtml(a)).join(', ')}</span>
-            </div>
+            </div>` : ''}
         </div>
         ${movie.quote ? `<div class="modal-quote">"${escapeHtml(movie.quote)}"</div>` : ''}
-        ${movie.douban_url ? `<a class="modal-link" href="${movie.douban_url}" target="_blank" rel="noopener">
-            <i class="fas fa-external-link-alt"></i> 在豆瓣查看
+        ${linkUrl ? `<a class="modal-link" href="${linkUrl}" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> ${config.linkText}
         </a>` : ''}
     `;
 
@@ -910,7 +1001,8 @@ async function loadPeriodChanges() {
 
     // 加载指定日期的数据并与当前数据对比
     try {
-        const response = await fetch(`data/history/${period}.json`);
+        const config = SOURCE_CONFIG[state.currentSource];
+        const response = await fetch(`${config.historyPath}${period}.json`);
         if (!response.ok) {
             throw new Error('历史数据不存在');
         }

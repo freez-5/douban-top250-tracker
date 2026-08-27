@@ -1,5 +1,5 @@
 /* ============================================
-   豆瓣Top 250变化追踪器 - 样式表
+   Top 250 变化追踪器 - 样式表
    ============================================ */
 
 /* CSS变量 */
@@ -36,6 +36,13 @@
 
     /* 过渡 */
     --transition: all 0.3s ease;
+}
+
+/* IMDB 主题 */
+[data-source="imdb"] {
+    --primary-color: #f5c518;
+    --primary-dark: #d4a800;
+    --primary-light: #fff8e1;
 }
 
 /* 重置样式 */
@@ -94,6 +101,40 @@ body {
     font-weight: 600;
     color: var(--text-primary);
     white-space: nowrap;
+}
+
+/* 数据源切换 */
+.source-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-secondary);
+    padding: 4px;
+    border-radius: var(--radius-md);
+}
+
+.source-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.source-tab:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.source-tab.active {
+    background: var(--primary-color);
+    color: white;
 }
 
 .nav {
@@ -955,6 +996,16 @@ body {
         height: auto;
         padding: 12px 0;
         gap: 12px;
+    }
+
+    .source-tabs {
+        order: 2;
+        width: 100%;
+    }
+
+    .source-tab {
+        flex: 1;
+        justify-content: center;
     }
 
     .nav {

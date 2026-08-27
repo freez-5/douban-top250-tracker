@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-source="douban">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>豆瓣Top 250变化追踪器</title>
+    <title>Top 250 变化追踪器</title>
     <link rel="stylesheet" href="style.css">
     <!-- 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,16 @@
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-film"></i>
-                    <h1>豆瓣Top 250变化追踪器</h1>
+                    <h1>Top 250 变化追踪器</h1>
+                </div>
+                <!-- 数据源切换 -->
+                <div class="source-tabs">
+                    <button class="source-tab active" data-source="douban">
+                        <i class="fas fa-film"></i> 豆瓣
+                    </button>
+                    <button class="source-tab" data-source="imdb">
+                        <i class="fas fa-globe"></i> IMDB
+                    </button>
                 </div>
                 <nav class="nav">
                     <button class="nav-btn active" data-tab="changes">
@@ -63,8 +72,7 @@
                             <label style="font-size: 14px; color: var(--text-secondary);">查看变化:</label>
                             <select id="periodSelect" style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-left: 8px;">
                                 <option value="latest">最新变化</option>
-                                <option value="2025-07-01">七月变化</option>
-                                <option value="2025-08-01">八月变化</option>
+                                <!-- 动态生成历史时间段 -->
                             </select>
                         </div>
                         <button class="btn-primary" onclick="loadPeriodChanges()">
@@ -203,7 +211,7 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>数据来源: 豆瓣电影 | 每天自动更新</p>
+            <p id="footerSource">数据来源: 豆瓣电影 | 每周自动更新</p>
             <p class="disclaimer">本工具仅供学习交流使用，请勿用于商业用途</p>
         </div>
     </footer>

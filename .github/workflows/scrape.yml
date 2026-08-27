@@ -1,4 +1,4 @@
-name: Scrape Douban Top 250
+name: Scrape Top 250 Data
 
 # 触发条件
 on:
@@ -21,7 +21,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
 
     steps:
       # 检出代码
@@ -41,9 +41,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      # 运行爬虫
-      - name: Run scraper
+      # 运行豆瓣爬虫
+      - name: Scrape Douban Top 250
         run: python scripts/scrape.py
+        env:
+          PYTHONIOENCODING: utf-8
+
+      # 运行IMDB爬虫
+      - name: Scrape IMDB Top 250
+        run: python scripts/scrape_imdb.py
         env:
           PYTHONIOENCODING: utf-8
 
@@ -60,7 +66,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add data/
-          git commit -m "🔄 Update Top 250 data $(date +%Y-%m-%d)"
+          git commit -m "📊 Update Top 250 data $(date +%Y-%m-%d)"
           git push
 
       # 如果没有变化，输出提示
@@ -73,6 +79,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: douban-top250-data
+          name: top250-data
           path: data/
           retention-days: 30
