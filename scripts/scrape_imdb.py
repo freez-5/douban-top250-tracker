@@ -271,7 +271,7 @@ def parse_imdb_top250():
     return movies
 
 
-def compare_data(old_data, new_data):
+def compare_data(old_data, new_data, baseline_date=''):
     """对比新旧数据，生成变化报告"""
     old_movies = old_data.get('movies', [])
     new_movies = new_data.get('movies', [])
@@ -324,6 +324,7 @@ def compare_data(old_data, new_data):
         'has_previous': True,
         'old_timestamp': old_data.get('timestamp', ''),
         'new_timestamp': new_data.get('timestamp', ''),
+        'baseline_date': baseline_date,
         'entered': entered,
         'exited': exited,
         'rank_up': rank_up,
@@ -377,6 +378,76 @@ def load_previous_data():
     return None
 
 
+def list_history_dates():
+    """列出历史快照日期（降序），排除今天的文件"""
+    today_str = datetime.now().strftime('%Y-%m-%d')
+    dates = []
+    if os.path.isdir(HISTORY_DIR):
+        for fname in os.listdir(HISTORY_DIR):
+            if fname.endswith('.json') and fname != 'index.json':
+                date_str = fname[:-5]
+                if date_str != today_str:
+                    dates.append(date_str)
+    dates.sort(reverse=True)
+    return dates
+
+
+def load_baseline_data():
+    """
+    加载对比基准快照。
+
+    策略：优先选择距今 >= 7 天的最近快照（展示一周累计变化，与每周更新节奏一致）；
+    若不存在，则退回最早的历史快照；再没有则退回 current.json。
+    返回 (数据, 基准日期字符串)
+    """
+    dates = list_history_dates()
+    if dates:
+        today = datetime.now()
+        baseline_date = None
+        # 优先：最近的、距今 >= 7 天的快照
+        for d in dates:
+            try:
+                if (today - datetime.strptime(d, '%Y-%m-%d')).days >= 7:
+                    baseline_date = d
+                    break
+            except ValueError:
+                continue
+        # 退回：最早的历史快照
+        if not baseline_date:
+            baseline_date = dates[-1]
+
+        path = os.path.join(HISTORY_DIR, f'{baseline_date}.json')
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            if data.get('movies'):
+                print(f"对比基准: {baseline_date} 的历史快照")
+                return data, baseline_date
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"加载基准快照失败 {path}: {e}")
+
+    # 最后退回 current.json
+    old = load_previous_data()
+    if old:
+        old_ts = old.get('timestamp', '')
+        return old, old_ts[:10] if old_ts else ''
+    return None, ''
+
+
+def save_history_index():
+    """生成历史快照索引文件，供前端读取真实的快照日期列表"""
+    dates = []
+    if os.path.isdir(HISTORY_DIR):
+        for fname in os.listdir(HISTORY_DIR):
+            if fname.endswith('.json') and fname != 'index.json':
+                dates.append(fname[:-5])
+    dates.sort(reverse=True)
+    index_path = os.path.join(HISTORY_DIR, 'index.json')
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump({'dates': dates}, f, ensure_ascii=False, indent=2)
+    print(f"历史索引已保存到: {index_path} (共 {len(dates)} 个快照)")
+
+
 def main():
     """主函数"""
     print("=" * 50)
@@ -394,8 +465,8 @@ def main():
         print("未能获取到任何电影数据！")
         sys.exit(1)
 
-    # 加载旧数据用于对比
-    old_data = load_previous_data()
+    # 加载对比基准（先于保存今日快照，避免与自己对比）
+    old_data, baseline_date = load_baseline_data()
 
     # 生成变化报告
     if old_data and old_data.get('movies'):
@@ -403,7 +474,8 @@ def main():
         changes = compare_data(old_data, {
             'timestamp': datetime.now().isoformat(),
             'movies': movies
-        })
+        }, baseline_date)
+        print(f"  对比基准: {baseline_date or '上次运行'}")
         print(f"  新进入: {len(changes['entered'])} 部")
         print(f"  掉出: {len(changes['exited'])} 部")
         print(f"  排名上升: {len(changes['rank_up'])} 部")
@@ -417,6 +489,9 @@ def main():
 
     # 保存数据
     save_data(movies, changes)
+
+    # 生成历史索引，供前端读取
+    save_history_index()
 
     # 显示前 10 名
     print("\n" + "=" * 50)

@@ -86,6 +86,9 @@
                     <div class="update-time">
                         <i class="fas fa-clock"></i>
                         <span>最后更新: <span id="lastUpdate">--</span></span>
+                        <span class="baseline-info" style="display: none; margin-left: 16px;">
+                            <i class="fas fa-balance-scale"></i> 对比基准: <span id="baselineDate">--</span>
+                        </span>
                     </div>
                     <div class="update-stats">
                         <span class="stat new"><i class="fas fa-plus-circle"></i> 新增: <span id="newCount">0</span></span>
@@ -93,6 +96,12 @@
                         <span class="stat up"><i class="fas fa-arrow-up"></i> 上升: <span id="upCount">0</span></span>
                         <span class="stat down"><i class="fas fa-arrow-down"></i> 下降: <span id="downCount">0</span></span>
                     </div>
+                </div>
+
+                <!-- 无变化说明横幅 -->
+                <div id="noChangesBanner" class="no-changes-banner" style="display: none;">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="no-changes-text"></span>
                 </div>
 
                 <!-- 变化卡片网格 -->

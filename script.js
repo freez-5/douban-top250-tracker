@@ -64,6 +64,7 @@ function cacheElements() {
 
     // 变化追踪
     elements.lastUpdate = document.getElementById('lastUpdate');
+    elements.baselineDate = document.getElementById('baselineDate');
     elements.newCount = document.getElementById('newCount');
     elements.exitCount = document.getElementById('exitCount');
     elements.upCount = document.getElementById('upCount');
@@ -212,32 +213,29 @@ async function loadData() {
  */
 async function loadHistoryList() {
     try {
-        // 根据数据源加载不同的历史文件列表
         const config = SOURCE_CONFIG[state.currentSource];
 
-        // 预定义的历史文件列表
+        // 优先读取爬虫生成的索引文件（真实存在的快照日期）
         let historyFiles = [];
-
-        if (state.currentSource === 'douban') {
-            // 豆瓣的历史数据
-            historyFiles = ['2025-07-01', '2025-08-01', '2026-08-23'];
-        } else {
-            // IMDB 的历史数据
-            historyFiles = ['2026-08-27'];
+        try {
+            const resp = await fetch(`${config.historyPath}index.json`);
+            if (resp.ok) {
+                const index = await resp.json();
+                historyFiles = index.dates || [];
+            }
+        } catch (e) {
+            // 索引不存在时退回硬编码列表
         }
 
-        // 尝试加载最近30天的历史数据
-        const today = new Date();
-        for (let i = 0; i < 30; i++) {
-            const date = new Date(today);
-            date.setDate(date.getDate() - i);
-            const dateStr = date.toISOString().split('T')[0];
-            if (!historyFiles.includes(dateStr)) {
-                historyFiles.push(dateStr);
+        if (!historyFiles.length) {
+            if (state.currentSource === 'douban') {
+                historyFiles = ['2025-07-01', '2025-08-01', '2026-08-23'];
+            } else {
+                historyFiles = ['2026-08-27'];
             }
         }
 
-        // 按日期排序
+        // 按日期排序（降序）
         historyFiles.sort((a, b) => b.localeCompare(a));
 
         // 保存历史文件列表
@@ -293,6 +291,16 @@ function renderUpdateInfo() {
     // 更新时间
     elements.lastUpdate.textContent = formatDate(timestamp);
 
+    // 对比基准日期
+    if (elements.baselineDate) {
+        if (changes && changes.has_previous && changes.baseline_date) {
+            elements.baselineDate.parentElement.style.display = '';
+            elements.baselineDate.textContent = changes.baseline_date;
+        } else {
+            elements.baselineDate.parentElement.style.display = 'none';
+        }
+    }
+
     // 变化统计
     if (changes && changes.has_previous) {
         elements.newCount.textContent = changes.entered?.length || 0;
@@ -310,18 +318,26 @@ function renderChanges() {
 
     if (!changes || !changes.has_previous) {
         // 无历史数据
-        const emptyHtml = '<div class="empty-state">首次运行，暂无变化数据</div>';
-        elements.enteredList.innerHTML = emptyHtml;
-        elements.exitedList.innerHTML = emptyHtml;
-        elements.rankUpList.innerHTML = emptyHtml;
-        elements.rankDownList.innerHTML = emptyHtml;
-
-        elements.enteredBadge.textContent = '0';
-        elements.exitedBadge.textContent = '0';
-        elements.rankUpBadge.textContent = '0';
-        elements.rankDownBadge.textContent = '0';
+        showNoChangesBanner('首次运行，暂无历史数据可对比。数据每周自动更新，下次运行后将显示榜单变化。');
         return;
     }
+
+    const total = (changes.entered?.length || 0) + (changes.exited?.length || 0) +
+                  (changes.rank_up?.length || 0) + (changes.rank_down?.length || 0);
+
+    if (total === 0) {
+        // 有对比基准但榜单无任何变化 —— 显示解释性横幅
+        const baseline = changes.baseline_date
+            ? `与 ${changes.baseline_date} 快照相比，本期榜单没有任何变化`
+            : '与上一次抓取相比，本期榜单没有任何变化';
+        const sourceNote = state.currentSource === 'imdb'
+            ? '（IMDB 数据来自官方数据集，每日更新一次，短期内排名波动很小）'
+            : '';
+        showNoChangesBanner(`${baseline}${sourceNote}。可在上方选择更早的历史日期查看累计变化。`);
+        return;
+    }
+
+    hideNoChangesBanner();
 
     // 新进入
     elements.enteredBadge.textContent = changes.entered?.length || 0;
@@ -349,6 +365,35 @@ function renderChanges() {
 
     // 绑定点击事件
     bindMovieClickEvents();
+}
+
+/**
+ * 显示"无变化"解释横幅，隐藏变化卡片
+ */
+function showNoChangesBanner(message) {
+    const banner = document.getElementById('noChangesBanner');
+    const grid = document.querySelector('.changes-grid');
+    if (banner) {
+        banner.querySelector('.no-changes-text').textContent = message;
+        banner.style.display = 'block';
+    }
+    if (grid) grid.style.display = 'none';
+
+    // 徽章和统计归零
+    elements.enteredBadge.textContent = '0';
+    elements.exitedBadge.textContent = '0';
+    elements.rankUpBadge.textContent = '0';
+    elements.rankDownBadge.textContent = '0';
+}
+
+/**
+ * 隐藏"无变化"横幅，恢复变化卡片
+ */
+function hideNoChangesBanner() {
+    const banner = document.getElementById('noChangesBanner');
+    const grid = document.querySelector('.changes-grid');
+    if (banner) banner.style.display = 'none';
+    if (grid) grid.style.display = '';
 }
 
 /**
@@ -1095,6 +1140,9 @@ function updateChangesDisplay(changes, period) {
     // 更新时间显示
     elements.lastUpdate.textContent = `${period} 至今`;
 
+    const total = (changes.entered?.length || 0) + (changes.exited?.length || 0) +
+                  (changes.rank_up?.length || 0) + (changes.rank_down?.length || 0);
+
     // 更新统计数字
     elements.newCount.textContent = changes.entered?.length || 0;
     elements.exitCount.textContent = changes.exited?.length || 0;
@@ -1106,6 +1154,13 @@ function updateChangesDisplay(changes, period) {
     elements.exitedBadge.textContent = changes.exited?.length || 0;
     elements.rankUpBadge.textContent = changes.rank_up?.length || 0;
     elements.rankDownBadge.textContent = changes.rank_down?.length || 0;
+
+    if (total === 0) {
+        showNoChangesBanner(`与 ${period} 快照相比，榜单没有任何变化。可选择其他历史日期查看。`);
+        return;
+    }
+
+    hideNoChangesBanner();
 
     // 更新列表
     elements.enteredList.innerHTML = changes.entered?.length

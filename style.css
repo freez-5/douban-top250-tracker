@@ -433,6 +433,37 @@ body {
     color: var(--text-tertiary);
 }
 
+/* 无变化说明横幅 */
+.no-changes-banner {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.no-changes-banner i {
+    margin-top: 4px;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.baseline-info {
+    color: var(--text-tertiary);
+    font-size: 13px;
+}
+
+.baseline-info i {
+    margin-right: 2px;
+}
+
 /* 电影条目 */
 .movie-item {
     display: flex;
