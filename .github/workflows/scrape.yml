@@ -42,15 +42,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 运行豆瓣爬虫
+      # 运行豆瓣爬虫（失败自动重试，防止单次网络波动导致整周数据缺失）
       - name: Scrape Douban Top 250
-        run: python scripts/scrape.py
+        run: |
+          ok=0
+          for i in 1 2 3; do
+            echo "豆瓣爬虫 第 $i/3 次尝试..."
+            if python scripts/scrape.py; then ok=1; break; fi
+            [ "$i" = "3" ] || sleep 20
+          done
+          [ "$ok" = "1" ]
         env:
           PYTHONIOENCODING: utf-8
 
-      # 运行IMDB爬虫
+      # 运行IMDB爬虫（失败自动重试）
       - name: Scrape IMDB Top 250
-        run: python scripts/scrape_imdb.py
+        run: |
+          ok=0
+          for i in 1 2 3; do
+            echo "IMDB爬虫 第 $i/3 次尝试..."
+            if python scripts/scrape_imdb.py; then ok=1; break; fi
+            [ "$i" = "3" ] || sleep 20
+          done
+          [ "$ok" = "1" ]
         env:
           PYTHONIOENCODING: utf-8
 
