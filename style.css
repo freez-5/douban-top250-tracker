@@ -90,58 +90,57 @@
 }
 
 /* --------------------------------------------
-   深色主题（跟随系统）
+   深色主题（由 <html data-theme="dark"> 驱动；
+   页面加载时的小脚本会按系统偏好和用户选择初始化）
    -------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
+[data-theme="dark"] {
+    color-scheme: dark;
 
-        --primary: #00c853;
-        --primary-deep: #00a844;
-        --primary-text: #3fd06c;
-        --primary-soft: rgba(0, 200, 83, 0.16);
+    --primary: #00c853;
+    --primary-deep: #00a844;
+    --primary-text: #3fd06c;
+    --primary-soft: rgba(0, 200, 83, 0.16);
 
-        --success: #34d399;
-        --danger: #f87171;
-        --warning: #fbbf24;
-        --info: #60a5fa;
-        --success-soft: rgba(52, 211, 153, 0.14);
-        --danger-soft: rgba(248, 113, 113, 0.13);
-        --warning-soft: rgba(251, 191, 36, 0.14);
-        --info-soft: rgba(96, 165, 250, 0.14);
-        --star: #fbbf24;
+    --success: #34d399;
+    --danger: #f87171;
+    --warning: #fbbf24;
+    --info: #60a5fa;
+    --success-soft: rgba(52, 211, 153, 0.14);
+    --danger-soft: rgba(248, 113, 113, 0.13);
+    --warning-soft: rgba(251, 191, 36, 0.14);
+    --info-soft: rgba(96, 165, 250, 0.14);
+    --star: #fbbf24;
 
-        --bg: #0d1218;
-        --surface: #151c25;
-        --surface-2: #1c2530;
-        --border: #263140;
-        --border-strong: #334254;
-        --text-1: #e8eef4;
-        --text-2: #a7b4c2;
-        --text-3: #6e7d8d;
+    --bg: #0d1218;
+    --surface: #151c25;
+    --surface-2: #1c2530;
+    --border: #263140;
+    --border-strong: #334254;
+    --text-1: #e8eef4;
+    --text-2: #a7b4c2;
+    --text-3: #6e7d8d;
 
-        --header-bg: rgba(14, 19, 26, 0.82);
-        --header-border: rgba(255, 255, 255, 0.07);
-        --footer-bg: #0a0f15;
-        --footer-text: #8b99a9;
+    --header-bg: rgba(14, 19, 26, 0.82);
+    --header-border: rgba(255, 255, 255, 0.07);
+    --footer-bg: #0a0f15;
+    --footer-text: #8b99a9;
 
-        --glow-1: rgba(0, 200, 90, 0.10);
-        --glow-2: rgba(245, 197, 24, 0.05);
+    --glow-1: rgba(0, 200, 90, 0.10);
+    --glow-2: rgba(245, 197, 24, 0.05);
 
-        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.28);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45), 0 14px 34px rgba(0, 0, 0, 0.35);
-        --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.28);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45), 0 14px 34px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
 
-        --select-arrow: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237e8b9a' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    }
+    --select-arrow: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237e8b9a' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
 
-    [data-source="imdb"] {
-        --primary: #f5c518;
-        --primary-deep: #ffdd55;
-        --primary-text: #f5c518;
-        --primary-soft: rgba(245, 197, 24, 0.15);
-        --on-primary: #221a00;
-    }
+[data-theme="dark"][data-source="imdb"] {
+    --primary: #f5c518;
+    --primary-deep: #ffdd55;
+    --primary-text: #f5c518;
+    --primary-soft: rgba(245, 197, 24, 0.15);
+    --on-primary: #221a00;
 }
 
 /* --------------------------------------------
@@ -432,7 +431,40 @@ select:focus,
 }
 
 .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
+}
+
+/* 白天/黑夜主题切换按钮 */
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text-2);
+    border-radius: 11px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary-text);
+    background: var(--primary-soft);
+    transform: translateY(-1px);
+}
+
+.theme-toggle i {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle:hover i {
+    transform: rotate(40deg);
 }
 
 .search-box {
@@ -1734,7 +1766,9 @@ span.page-btn {
     }
 
     .search-box {
-        width: 100%;
+        flex: 1;
+        width: auto;
+        min-width: 0;
     }
 
     .source-tabs {

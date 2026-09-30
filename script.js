@@ -60,8 +60,36 @@ const SOURCE_CONFIG = {
  */
 function init() {
     cacheElements();
+    initThemeToggle();
     bindEvents();
     loadData();
+}
+
+/**
+ * 白天/黑夜主题切换
+ * 初始值由 <head> 内的内联脚本根据 localStorage 和系统偏好设置，
+ * 这里只负责渲染按钮状态和响应用户点击。
+ */
+function initThemeToggle() {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    const icon = btn.querySelector('i');
+
+    const apply = (dark) => {
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+        if (icon) icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+        btn.title = dark ? '切换到白天模式' : '切换到黑夜模式';
+        btn.setAttribute('aria-label', btn.title);
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', dark ? '#0d1218' : '#00b51d');
+    };
+
+    apply(document.documentElement.dataset.theme === 'dark');
+
+    btn.addEventListener('click', () => {
+        apply(document.documentElement.dataset.theme !== 'dark');
+    });
 }
 
 /**
