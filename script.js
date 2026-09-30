@@ -19,6 +19,20 @@ const state = {
 // DOM元素缓存
 const elements = {};
 
+// 海报加载失败时的占位图（深色影院质感 + 播放按钮）
+// 注意：整段 URI 会被放进 onerror="this.src='...'" 的单引号字符串里，
+// 因此内部引号必须全部写成 %27，空格写成 %20。
+const POSTER_FALLBACK =
+    "data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20140%27%3E" +
+    "%3Cdefs%3E%3ClinearGradient%20id=%27g%27%20x1=%270%27%20y1=%270%27%20x2=%271%27%20y2=%271%27%3E" +
+    "%3Cstop%20offset=%270%27%20stop-color=%27%2342536a%27/%3E" +
+    "%3Cstop%20offset=%271%27%20stop-color=%27%2327303d%27/%3E" +
+    "%3C/linearGradient%3E%3C/defs%3E" +
+    "%3Crect%20width=%27100%27%20height=%27140%27%20fill=%27url(%23g)%27/%3E" +
+    "%3Ccircle%20cx=%2750%27%20cy=%2770%27%20r=%2723%27%20fill=%27none%27%20stroke=%27rgba(255,255,255,0.5)%27%20stroke-width=%274%27/%3E" +
+    "%3Cpath%20d=%27M44%2058L65%2070L44%2082Z%27%20fill=%27rgba(255,255,255,0.5)%27/%3E" +
+    "%3C/svg%3E";
+
 // 数据源配置
 const SOURCE_CONFIG = {
     douban: {
@@ -404,7 +418,7 @@ function createMovieItemHtml(movie, type) {
         <div class="movie-item" data-title="${escapeHtml(movie.title)}">
             <div class="movie-poster-small">
                 <img src="${movie.cover_url}" alt="${escapeHtml(movie.title)}" loading="lazy"
-                     onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                     onerror="this.src='${POSTER_FALLBACK}'">
             </div>
             <div class="movie-info">
                 <div class="movie-title">${escapeHtml(movie.title)}</div>
@@ -514,15 +528,16 @@ function renderRankingList() {
     elements.rankingList.innerHTML = pageMovies.map((movie, index) => {
         const globalIndex = startIndex + index;
         const change = getRankChange(movie.title);
+        const rankClass = movie.rank === 1 ? 'top1' : movie.rank === 2 ? 'top2' : movie.rank === 3 ? 'top3' : '';
 
         return `
             <div class="ranking-card" data-title="${escapeHtml(movie.title)}">
-                <div class="ranking-number ${movie.rank <= 3 ? 'top3' : ''}">
+                <div class="ranking-number ${rankClass}">
                     ${movie.rank}
                 </div>
                 <div class="ranking-poster">
                     <img src="${movie.cover_url}" alt="${escapeHtml(movie.title)}" loading="lazy"
-                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                         onerror="this.src='${POSTER_FALLBACK}'">
                 </div>
                 <div class="ranking-details">
                     <div class="ranking-title">${escapeHtml(movie.title)}</div>
@@ -536,7 +551,7 @@ function renderRankingList() {
                 </div>
                 <div class="ranking-stats">
                     <div class="ranking-rating">${movie.rating}</div>
-                    <div class="ranking-rating-count">${formatNumber(movie.rating_count)}人评价</div>
+                    ${movie.rating_count > 0 ? `<div class="ranking-rating-count">${formatNumber(movie.rating_count)} 人评价</div>` : ''}
                     ${change ? `<div class="ranking-change ${change.type}">${change.text}</div>` : ''}
                 </div>
             </div>
@@ -646,18 +661,18 @@ function renderHistoryList() {
 
     // 添加快速对比区域
     let html = `
-        <div class="comparison-section" style="background: var(--bg-primary); padding: 20px; border-radius: var(--radius-lg); margin-bottom: 20px;">
-            <h3 style="margin-bottom: 16px;">📊 快速对比</h3>
-            <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-                <div>
-                    <label style="font-size: 14px; color: var(--text-secondary);">起始日期:</label>
-                    <select id="compareDate1" style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-left: 8px;">
+        <div class="comparison-section">
+            <h3 class="comparison-title"><i class="fas fa-bolt"></i> 快速对比</h3>
+            <div class="comparison-controls">
+                <div class="filter-group">
+                    <label>起始日期:</label>
+                    <select id="compareDate1">
                         ${state.historyFiles.map(d => `<option value="${d}">${d}</option>`).join('')}
                     </select>
                 </div>
-                <div>
-                    <label style="font-size: 14px; color: var(--text-secondary);">结束日期:</label>
-                    <select id="compareDate2" style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-left: 8px;">
+                <div class="filter-group">
+                    <label>结束日期:</label>
+                    <select id="compareDate2">
                         ${state.historyFiles.map(d => `<option value="${d}">${d}</option>`).join('')}
                     </select>
                 </div>
@@ -671,7 +686,7 @@ function renderHistoryList() {
     // 历史列表
     html += state.historyFiles.map(date => `
         <div class="history-card">
-            <div class="history-date">${date}</div>
+            <div class="history-date"><i class="fas fa-calendar-day"></i>${date}</div>
             <div class="history-actions">
                 <button class="btn-secondary" onclick="loadHistoryByDate('${date}')">
                     查看数据
@@ -743,8 +758,8 @@ function showHistoryModal(date, data) {
                 <span class="modal-info-value">${formatDate(data.timestamp)}</span>
             </div>
         </div>
-        <h3 style="margin-bottom: 16px;">前10名电影</h3>
-        <div style="max-height: 400px; overflow-y: auto;">
+        <h3 class="modal-section-title"><i class="fas fa-trophy"></i> 前10名电影</h3>
+        <div class="modal-scroll-list">
             ${data.movies?.slice(0, 10).map(m => `
                 <div class="movie-item">
                     <div class="movie-rank">${m.rank}</div>
@@ -868,13 +883,13 @@ function showComparisonModal(date1, data1, date2, data2) {
 
     if (entered.length > 0) {
         html += `
-            <h3 style="margin: 20px 0 10px;">🆕 新进入榜单</h3>
-            <div style="max-height: 200px; overflow-y: auto;">
+            <h3 class="modal-section-title accent-blue"><i class="fas fa-circle-plus"></i> 新进入榜单</h3>
+            <div class="modal-scroll-list">
                 ${entered.slice(0, 10).map(m => `
                     <div class="movie-item">
                         <div class="movie-poster-small">
                             <img src="${m.cover_url}" alt="${escapeHtml(m.title)}" loading="lazy"
-                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                                 onerror="this.src='${POSTER_FALLBACK}'">
                         </div>
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(m.title)}</div>
@@ -893,13 +908,13 @@ function showComparisonModal(date1, data1, date2, data2) {
 
     if (exited.length > 0) {
         html += `
-            <h3 style="margin: 20px 0 10px;">📤 掉出榜单</h3>
-            <div style="max-height: 200px; overflow-y: auto;">
+            <h3 class="modal-section-title accent-rose"><i class="fas fa-circle-minus"></i> 掉出榜单</h3>
+            <div class="modal-scroll-list">
                 ${exited.slice(0, 10).map(m => `
                     <div class="movie-item">
                         <div class="movie-poster-small">
                             <img src="${m.cover_url}" alt="${escapeHtml(m.title)}" loading="lazy"
-                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+                                 onerror="this.src='${POSTER_FALLBACK}'">
                         </div>
                         <div class="movie-info">
                             <div class="movie-title">${escapeHtml(m.title)}</div>
@@ -918,8 +933,8 @@ function showComparisonModal(date1, data1, date2, data2) {
 
     if (rankUp.length > 0) {
         html += `
-            <h3 style="margin: 20px 0 10px;">📈 排名上升TOP10</h3>
-            <div style="max-height: 200px; overflow-y: auto;">
+            <h3 class="modal-section-title accent-green"><i class="fas fa-arrow-trend-up"></i> 排名上升TOP10</h3>
+            <div class="modal-scroll-list">
                 ${rankUp.slice(0, 10).map(r => `
                     <div class="movie-item">
                         <div class="movie-info">
@@ -936,8 +951,8 @@ function showComparisonModal(date1, data1, date2, data2) {
 
     if (rankDown.length > 0) {
         html += `
-            <h3 style="margin: 20px 0 10px;">📉 排名下降TOP10</h3>
-            <div style="max-height: 200px; overflow-y: auto;">
+            <h3 class="modal-section-title accent-amber"><i class="fas fa-arrow-trend-down"></i> 排名下降TOP10</h3>
+            <div class="modal-scroll-list">
                 ${rankDown.slice(0, 10).map(r => `
                     <div class="movie-item">
                         <div class="movie-info">
@@ -985,7 +1000,7 @@ function showMovieDetail(title) {
         ${movie.original_title && movie.original_title !== movie.title ? `<div class="modal-original-title">${escapeHtml(movie.original_title)}</div>` : ''}
         <div class="modal-rating">
             <span class="modal-rating-score">${movie.rating}</span>
-            <span class="modal-rating-count">${formatNumber(movie.rating_count)} 人评价</span>
+            ${movie.rating_count > 0 ? `<span class="modal-rating-count">${formatNumber(movie.rating_count)} 人评价</span>` : ''}
         </div>
         <div class="modal-info">
             <div class="modal-info-item">
@@ -1139,6 +1154,12 @@ function compareData(oldData, newData) {
 function updateChangesDisplay(changes, period) {
     // 更新时间显示
     elements.lastUpdate.textContent = `${period} 至今`;
+
+    // 对比基准与所选时段保持一致
+    if (elements.baselineDate && changes.has_previous) {
+        elements.baselineDate.parentElement.style.display = '';
+        elements.baselineDate.textContent = period;
+    }
 
     const total = (changes.entered?.length || 0) + (changes.exited?.length || 0) +
                   (changes.rank_up?.length || 0) + (changes.rank_down?.length || 0);
