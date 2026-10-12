@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05T02:27:39.613217",
+  "timestamp": "2026-10-12T02:42:29.088304",
   "count": 250,
   "movies": [
     {
@@ -2310,7 +2310,7 @@
       ],
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1294639/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2004174709.webp"
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2455767018.webp"
     },
     {
       "rank": 125,
@@ -2614,6 +2614,24 @@
     },
     {
       "rank": 141,
+      "title": "哪吒闹海",
+      "original_title": "",
+      "other_info": "Prince Nezha's Triumph Against Dragon King  /  Nezha Conquers the Dragon King",
+      "rating": 9.2,
+      "rating_count": 0,
+      "year": "1979",
+      "region": "中国大陆",
+      "genre": "冒险 动画 奇幻",
+      "director": "王树忱 Shuchen Wang",
+      "actors": [
+        "梁正晖 Zhenghui ..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1307315/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2532803206.webp"
+    },
+    {
+      "rank": 142,
       "title": "阳光灿烂的日子",
       "original_title": "",
       "other_info": "In the Heat of the Sun",
@@ -2631,24 +2649,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1291875/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2582946597.webp"
-    },
-    {
-      "rank": 142,
-      "title": "哪吒闹海",
-      "original_title": "",
-      "other_info": "Prince Nezha's Triumph Against Dragon King  /  Nezha Conquers the Dragon King",
-      "rating": 9.2,
-      "rating_count": 0,
-      "year": "1979",
-      "region": "中国大陆",
-      "genre": "冒险 动画 奇幻",
-      "director": "王树忱 Shuchen Wang",
-      "actors": [
-        "梁正晖 Zhenghui ..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1307315/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2532803206.webp"
     },
     {
       "rank": 143,
@@ -3417,6 +3417,22 @@
     },
     {
       "rank": 184,
+      "title": "上帝之城",
+      "original_title": "Cidade de Deus",
+      "other_info": "无主之城(港)  /  无法无天(台)",
+      "rating": 9.0,
+      "rating_count": 0,
+      "year": "2002",
+      "region": "巴西 法国",
+      "genre": "犯罪 剧情",
+      "director": "费尔南多·梅里尔斯 Fernando Meirelles",
+      "actors": [],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1292208/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p455677490.webp"
+    },
+    {
+      "rank": 185,
       "title": "心迷宫",
       "original_title": "",
       "other_info": "殡棺  /  The Coffin in the Mountain",
@@ -3433,22 +3449,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25917973/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2926020289.webp"
-    },
-    {
-      "rank": 185,
-      "title": "上帝之城",
-      "original_title": "Cidade de Deus",
-      "other_info": "无主之城(港)  /  无法无天(台)",
-      "rating": 9.0,
-      "rating_count": 0,
-      "year": "2002",
-      "region": "巴西 法国",
-      "genre": "犯罪 剧情",
-      "director": "费尔南多·梅里尔斯 Fernando Meirelles",
-      "actors": [],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1292208/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p455677490.webp"
     },
     {
       "rank": 186,
@@ -4666,423 +4666,47 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-09-07T22:54:54.091888",
-    "new_timestamp": "2026-10-05T02:27:39.613217",
-    "baseline_date": "2026-09-07",
+    "old_timestamp": "2026-10-05T02:27:39.613217",
+    "new_timestamp": "2026-10-12T02:42:29.088304",
+    "baseline_date": "2026-10-05",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "血观音",
-        "original_title": "血觀音",
-        "old_rank": 247,
-        "new_rank": 245,
-        "change": 2,
-        "rating": 8.6
-      },
-      {
-        "title": "雨中曲",
-        "original_title": "Singin' in the Rain",
-        "old_rank": 182,
-        "new_rank": 180,
-        "change": 2,
-        "rating": 9.1
-      },
-      {
-        "title": "爱乐之城",
-        "original_title": "La La Land",
-        "old_rank": 205,
-        "new_rank": 203,
-        "change": 2,
-        "rating": 8.4
-      },
-      {
-        "title": "高山下的花环",
-        "original_title": "",
-        "old_rank": 166,
-        "new_rank": 164,
-        "change": 2,
-        "rating": 9.5
-      },
-      {
-        "title": "无耻混蛋",
-        "original_title": "Inglourious Basterds",
-        "old_rank": 216,
-        "new_rank": 215,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "指环王2：双塔奇兵",
-        "original_title": "The Lord of the Rings: The Two Towers",
-        "old_rank": 48,
-        "new_rank": 47,
-        "change": 1,
-        "rating": 9.2
-      },
-      {
-        "title": "谍影重重2",
-        "original_title": "The Bourne Supremacy",
-        "old_rank": 241,
-        "new_rank": 240,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "心灵奇旅",
-        "original_title": "Soul",
-        "old_rank": 159,
-        "new_rank": 158,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "功夫",
-        "original_title": "",
-        "old_rank": 67,
-        "new_rank": 66,
-        "change": 1,
-        "rating": 8.9
-      },
-      {
-        "title": "色，戒",
-        "original_title": "",
-        "old_rank": 134,
-        "new_rank": 133,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "心迷宫",
-        "original_title": "",
+        "title": "上帝之城",
+        "original_title": "Cidade de Deus",
         "old_rank": 185,
         "new_rank": 184,
         "change": 1,
-        "rating": 8.7
+        "rating": 9.0
       },
       {
-        "title": "千钧一发",
-        "original_title": "Gattaca",
-        "old_rank": 224,
-        "new_rank": 223,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "白日梦想家",
-        "original_title": "The Secret Life of Walter Mitty",
-        "old_rank": 202,
-        "new_rank": 201,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "新世界",
-        "original_title": "신세계",
-        "old_rank": 129,
-        "new_rank": 128,
-        "change": 1,
-        "rating": 8.9
-      },
-      {
-        "title": "头脑特工队",
-        "original_title": "Inside Out",
-        "old_rank": 113,
-        "new_rank": 112,
-        "change": 1,
-        "rating": 8.9
-      },
-      {
-        "title": "蜘蛛侠：平行宇宙",
-        "original_title": "Spider-Man: Into the Spider-Verse",
-        "old_rank": 239,
-        "new_rank": 238,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "怪兽电力公司",
-        "original_title": "Monsters, Inc.",
-        "old_rank": 136,
-        "new_rank": 135,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "彗星来的那一夜",
-        "original_title": "Coherence",
-        "old_rank": 228,
-        "new_rank": 227,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "终结者2：审判日",
-        "original_title": "Terminator 2: Judgment Day",
-        "old_rank": 218,
-        "new_rank": 217,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "波西米亚狂想曲",
-        "original_title": "Bohemian Rhapsody",
-        "old_rank": 211,
-        "new_rank": 210,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "冰川时代",
-        "original_title": "Ice Age",
-        "old_rank": 198,
-        "new_rank": 197,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "寄生虫",
-        "original_title": "기생충",
-        "old_rank": 103,
-        "new_rank": 102,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "时空恋旅人",
-        "original_title": "About Time",
-        "old_rank": 124,
-        "new_rank": 123,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "大红灯笼高高挂",
+        "title": "哪吒闹海",
         "original_title": "",
-        "old_rank": 214,
-        "new_rank": 213,
+        "old_rank": 142,
+        "new_rank": 141,
         "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "源代码",
-        "original_title": "Source Code",
-        "old_rank": 206,
-        "new_rank": 205,
-        "change": 1,
-        "rating": 8.6
+        "rating": 9.2
       }
     ],
     "rank_down": [
       {
-        "title": "幽灵公主",
-        "original_title": "もののけ姫",
-        "old_rank": 102,
-        "new_rank": 103,
+        "title": "阳光灿烂的日子",
+        "original_title": "",
+        "old_rank": 141,
+        "new_rank": 142,
         "change": -1,
-        "rating": 8.9
+        "rating": 8.8
       },
       {
-        "title": "上帝之城",
-        "original_title": "Cidade de Deus",
+        "title": "心迷宫",
+        "original_title": "",
         "old_rank": 184,
         "new_rank": 185,
         "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "钢琴家",
-        "original_title": "The Pianist",
-        "old_rank": 47,
-        "new_rank": 48,
-        "change": -1,
-        "rating": 9.3
-      },
-      {
-        "title": "千年女优",
-        "original_title": "千年女優",
-        "old_rank": 240,
-        "new_rank": 241,
-        "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "爱在黎明破晓前",
-        "original_title": "Before Sunrise",
-        "old_rank": 112,
-        "new_rank": 113,
-        "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "完美的世界",
-        "original_title": "A Perfect World",
-        "old_rank": 135,
-        "new_rank": 136,
-        "change": -1,
-        "rating": 9.1
-      },
-      {
-        "title": "小姐",
-        "original_title": "아가씨",
-        "old_rank": 246,
-        "new_rank": 247,
-        "change": -1,
-        "rating": 8.6
-      },
-      {
-        "title": "卢旺达饭店",
-        "original_title": "Hotel Rwanda",
-        "old_rank": 197,
-        "new_rank": 198,
-        "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "虎口脱险",
-        "original_title": "La grande vadrouille",
-        "old_rank": 227,
-        "new_rank": 228,
-        "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "爆裂鼓手",
-        "original_title": "Whiplash",
-        "old_rank": 217,
-        "new_rank": 218,
-        "change": -1,
-        "rating": 8.6
-      },
-      {
-        "title": "哈利·波特与死亡圣器(下)",
-        "original_title": "Harry Potter and the Deathly Hallows: Part 2",
-        "old_rank": 66,
-        "new_rank": 67,
-        "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "初恋这件小事",
-        "original_title": "สิ่งเล็กเล็กที่เรียกว่า...รัก",
-        "old_rank": 223,
-        "new_rank": 224,
-        "change": -1,
-        "rating": 8.5
-      },
-      {
-        "title": "勇敢的心",
-        "original_title": "Braveheart",
-        "old_rank": 123,
-        "new_rank": 124,
-        "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "消失的爱人",
-        "original_title": "Gone Girl",
-        "old_rank": 128,
-        "new_rank": 129,
-        "change": -1,
-        "rating": 8.7
-      },
-      {
-        "title": "哈利·波特与死亡圣器(上)",
-        "original_title": "Harry Potter and the Deathly Hallows: Part 1",
-        "old_rank": 215,
-        "new_rank": 216,
-        "change": -1,
-        "rating": 8.6
-      },
-      {
-        "title": "一个叫欧维的男人决定去死",
-        "original_title": "En man som heter Ove",
-        "old_rank": 133,
-        "new_rank": 134,
-        "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "花束般的恋爱",
-        "original_title": "花束みたいな恋をした",
-        "old_rank": 203,
-        "new_rank": 204,
-        "change": -1,
-        "rating": 8.6
-      },
-      {
-        "title": "遗愿清单",
-        "original_title": "The Bucket List",
-        "old_rank": 201,
-        "new_rank": 202,
-        "change": -1,
-        "rating": 8.7
-      },
-      {
-        "title": "惊魂记",
-        "original_title": "Psycho",
-        "old_rank": 158,
-        "new_rank": 159,
-        "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "步履不停",
-        "original_title": "歩いても 歩いても",
-        "old_rank": 238,
-        "new_rank": 239,
-        "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "你看起来好像很好吃",
-        "original_title": "おまえうまそうだな",
-        "old_rank": 210,
-        "new_rank": 211,
-        "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "血钻",
-        "original_title": "Blood Diamond",
-        "old_rank": 245,
-        "new_rank": 246,
-        "change": -1,
-        "rating": 8.7
-      },
-      {
-        "title": "城市之光",
-        "original_title": "City Lights",
-        "old_rank": 213,
-        "new_rank": 214,
-        "change": -1,
-        "rating": 9.3
-      },
-      {
-        "title": "大佛普拉斯",
-        "original_title": "",
-        "old_rank": 204,
-        "new_rank": 206,
-        "change": -2,
-        "rating": 8.7
-      },
-      {
-        "title": "爱在午夜降临前",
-        "original_title": "Before Midnight",
-        "old_rank": 180,
-        "new_rank": 182,
-        "change": -2,
-        "rating": 8.8
-      },
-      {
-        "title": "射雕英雄传之东成西就",
-        "original_title": "射鵰英雄傳之東成西就",
-        "old_rank": 164,
-        "new_rank": 166,
-        "change": -2,
         "rating": 8.7
       }
     ],
-    "total_changes": 51
+    "total_changes": 4
   }
 }
