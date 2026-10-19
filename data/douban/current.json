@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-12T02:42:29.088304",
+  "timestamp": "2026-10-19T01:53:47.550226",
   "count": 250,
   "movies": [
     {
@@ -1631,11 +1631,11 @@
       "year": "2000",
       "region": "中国台湾 日本",
       "genre": "剧情 爱情 家庭",
-      "director": "杨德昌 Edward Yang   主演: 吴念真",
+      "director": "杨德昌 Edward Yang   主演: 吴念真 Nien-Jen Wu",
       "actors": [
-        "吴念真",
+        "吴念真 Nien-Jen Wu",
         "李凯莉 Kelly Lee",
-        "金燕玲 Elai..."
+        "..."
       ],
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292434/",
@@ -2163,25 +2163,6 @@
     },
     {
       "rank": 117,
-      "title": "重庆森林",
-      "original_title": "重慶森林",
-      "other_info": "Chungking Express",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "1994",
-      "region": "中国香港",
-      "genre": "剧情 爱情",
-      "director": "王家卫 Kar Wai Wong   主演: 林青霞 Brigitte Lin",
-      "actors": [
-        "林青霞 Brigitte Lin",
-        "金城武 Takeshi K..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1291999/",
-      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p792381411.webp"
-    },
-    {
-      "rank": 118,
       "title": "借东西的小人阿莉埃蒂",
       "original_title": "借りぐらしのアリエッティ",
       "other_info": "借物少女艾莉缇(台)  /  借东西的小矮人亚莉亚蒂(港)",
@@ -2198,6 +2179,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/4202302/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p617533616.webp"
+    },
+    {
+      "rank": 118,
+      "title": "重庆森林",
+      "original_title": "重慶森林",
+      "other_info": "Chungking Express",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "1994",
+      "region": "中国香港",
+      "genre": "剧情 爱情",
+      "director": "王家卫 Kar Wai Wong   主演: 林青霞 Brigitte Lin",
+      "actors": [
+        "林青霞 Brigitte Lin",
+        "金城武 Takeshi K..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1291999/",
+      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p792381411.webp"
     },
     {
       "rank": 119,
@@ -2521,24 +2521,6 @@
     },
     {
       "rank": 136,
-      "title": "完美的世界",
-      "original_title": "A Perfect World",
-      "other_info": "强盗保镳",
-      "rating": 9.1,
-      "rating_count": 0,
-      "year": "1993",
-      "region": "美国",
-      "genre": "剧情 犯罪",
-      "director": "克林特·伊斯特伍德 Clint Eastwood   主演: 凯文·科斯特纳 Kevin Cos...",
-      "actors": [
-        "凯文·科斯特纳 Kevin Cos..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1300992/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2190556408.webp"
-    },
-    {
-      "rank": 137,
       "title": "教父3",
       "original_title": "The Godfather: Part III",
       "other_info": "教父第三集  /  教父 III",
@@ -2554,6 +2536,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1294240/",
       "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2169664351.webp"
+    },
+    {
+      "rank": 137,
+      "title": "完美的世界",
+      "original_title": "A Perfect World",
+      "other_info": "强盗保镳",
+      "rating": 9.1,
+      "rating_count": 0,
+      "year": "1993",
+      "region": "美国",
+      "genre": "剧情 犯罪",
+      "director": "克林特·伊斯特伍德 Clint Eastwood   主演: 凯文·科斯特纳 Kevin Cos...",
+      "actors": [
+        "凯文·科斯特纳 Kevin Cos..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1300992/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2190556408.webp"
     },
     {
       "rank": 138,
@@ -2577,6 +2577,24 @@
     },
     {
       "rank": 139,
+      "title": "天使爱美丽",
+      "original_title": "Le Fabuleux destin d'Amélie Poulain",
+      "other_info": "艾蜜莉的异想世界(台)  /  天使艾米莉",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2001",
+      "region": "法国 德国",
+      "genre": "剧情 喜剧 爱情",
+      "director": "让-皮埃尔·热内 Jean-Pierre Jeunet   主演: 奥黛丽·塔图 Audrey Tau...",
+      "actors": [
+        "奥黛丽·塔图 Audrey Tau..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1292215/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2447590313.webp"
+    },
+    {
+      "rank": 140,
       "title": "小森林 夏秋篇",
       "original_title": "リトル・フォレスト 夏・秋",
       "other_info": "小森食光 / 夏秋篇(台)",
@@ -2593,24 +2611,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25814705/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2232317770.webp"
-    },
-    {
-      "rank": 140,
-      "title": "天使爱美丽",
-      "original_title": "Le Fabuleux destin d'Amélie Poulain",
-      "other_info": "艾蜜莉的异想世界(台)  /  天使艾米莉",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2001",
-      "region": "法国 德国",
-      "genre": "剧情 喜剧 爱情",
-      "director": "让-皮埃尔·热内 Jean-Pierre Jeunet   主演: 奥黛丽·塔图 Audrey Tau...",
-      "actors": [
-        "奥黛丽·塔图 Audrey Tau..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1292215/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2447590313.webp"
     },
     {
       "rank": 141,
@@ -2708,25 +2708,6 @@
     },
     {
       "rank": 146,
-      "title": "请以你的名字呼唤我",
-      "original_title": "Call Me by Your Name",
-      "other_info": "以你的名字呼唤我(港 / 台)",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "2017",
-      "region": "意大利 法国 巴西 美国",
-      "genre": "剧情 爱情 同性",
-      "director": "卢卡·瓜达尼诺 Luca Guadagnino   主演: 艾米·汉莫 Armie Hammer",
-      "actors": [
-        "艾米·汉莫 Armie Hammer",
-        "..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/26799731/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2505525050.webp"
-    },
-    {
-      "rank": 147,
       "title": "釜山行",
       "original_title": "부산행",
       "other_info": "尸杀列车(港)  /  尸速列车(台)",
@@ -2744,6 +2725,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25986180/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2360940399.webp"
+    },
+    {
+      "rank": 147,
+      "title": "请以你的名字呼唤我",
+      "original_title": "Call Me by Your Name",
+      "other_info": "以你的名字呼唤我(港 / 台)",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "2017",
+      "region": "意大利 法国 巴西 美国",
+      "genre": "剧情 爱情 同性",
+      "director": "卢卡·瓜达尼诺 Luca Guadagnino   主演: 艾米·汉莫 Armie Hammer",
+      "actors": [
+        "艾米·汉莫 Armie Hammer",
+        "..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/26799731/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2505525050.webp"
     },
     {
       "rank": 148,
@@ -3756,25 +3756,6 @@
     },
     {
       "rank": 202,
-      "title": "遗愿清单",
-      "original_title": "The Bucket List",
-      "other_info": "玩转身前事(港)  /  一路玩到挂(台)",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2007",
-      "region": "美国",
-      "genre": "冒险 喜剧 剧情",
-      "director": "罗伯·莱纳 Rob Reiner   主演: 杰克·尼科尔森 Jack Nicholson",
-      "actors": [
-        "杰克·尼科尔森 Jack Nicholson",
-        "摩根..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1867345/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2676812053.webp"
-    },
-    {
-      "rank": 203,
       "title": "爱乐之城",
       "original_title": "La La Land",
       "other_info": "星声梦里人(港)  /  乐来越爱你(台)",
@@ -3791,6 +3772,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25934014/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2934269059.webp"
+    },
+    {
+      "rank": 203,
+      "title": "遗愿清单",
+      "original_title": "The Bucket List",
+      "other_info": "玩转身前事(港)  /  一路玩到挂(台)",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2007",
+      "region": "美国",
+      "genre": "冒险 喜剧 剧情",
+      "director": "罗伯·莱纳 Rob Reiner   主演: 杰克·尼科尔森 Jack Nicholson",
+      "actors": [
+        "杰克·尼科尔森 Jack Nicholson",
+        "摩根..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1867345/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2676812053.webp"
     },
     {
       "rank": 204,
@@ -3984,24 +3984,6 @@
     },
     {
       "rank": 214,
-      "title": "城市之光",
-      "original_title": "City Lights",
-      "other_info": "City Lights: A Comedy Romance in Pantomime  /  Lichter der Großstadt",
-      "rating": 9.3,
-      "rating_count": 0,
-      "year": "1931",
-      "region": "美国",
-      "genre": "喜剧 剧情 爱情",
-      "director": "查理·卓别林 Charles Chaplin   主演: 查理·卓别林 Charles Chaplin ...",
-      "actors": [
-        "查理·卓别林 Charles Chaplin ..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1293908/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2170238828.webp"
-    },
-    {
-      "rank": 215,
       "title": "无耻混蛋",
       "original_title": "Inglourious Basterds",
       "other_info": "希魔撞正杀人狂(港)  /  恶棍特工(台)",
@@ -4018,6 +4000,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1438652/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2575043939.webp"
+    },
+    {
+      "rank": 215,
+      "title": "城市之光",
+      "original_title": "City Lights",
+      "other_info": "City Lights: A Comedy Romance in Pantomime  /  Lichter der Großstadt",
+      "rating": 9.3,
+      "rating_count": 0,
+      "year": "1931",
+      "region": "美国",
+      "genre": "喜剧 剧情 爱情",
+      "director": "查理·卓别林 Charles Chaplin   主演: 查理·卓别林 Charles Chaplin ...",
+      "actors": [
+        "查理·卓别林 Charles Chaplin ..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1293908/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2170238828.webp"
     },
     {
       "rank": 216,
@@ -4242,24 +4242,6 @@
     },
     {
       "rank": 228,
-      "title": "虎口脱险",
-      "original_title": "La grande vadrouille",
-      "other_info": "横冲直撞出重围(港)  /  大進擊(台)",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "1966",
-      "region": "法国 英国",
-      "genre": "喜剧 战争",
-      "director": "杰拉尔·乌里 Gérard Oury   主演: 路易·德·菲耐斯 Louis de Funès...",
-      "actors": [
-        "路易·德·菲耐斯 Louis de Funès..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1296909/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2399597512.webp"
-    },
-    {
-      "rank": 229,
       "title": "哈利·波特与凤凰社",
       "original_title": "Harry Potter and the Order of the Phoenix",
       "other_info": "哈利波特5：凤凰会的密令(港 / 台)",
@@ -4275,6 +4257,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1457217/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2913456924.webp"
+    },
+    {
+      "rank": 229,
+      "title": "虎口脱险",
+      "original_title": "La grande vadrouille",
+      "other_info": "横冲直撞出重围(港)  /  大進擊(台)",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "1966",
+      "region": "法国 英国",
+      "genre": "喜剧 战争",
+      "director": "杰拉尔·乌里 Gérard Oury   主演: 路易·德·菲耐斯 Louis de Funès...",
+      "actors": [
+        "路易·德·菲耐斯 Louis de Funès..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1296909/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2399597512.webp"
     },
     {
       "rank": 230,
@@ -4389,6 +4389,22 @@
     },
     {
       "rank": 236,
+      "title": "黑客帝国2：重装上阵",
+      "original_title": "The Matrix Reloaded",
+      "other_info": "22世纪杀人网络2：决战未来(港)  /  骇客任务：重装上阵(台)",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2003",
+      "region": "美国",
+      "genre": "动作 科幻",
+      "director": "拉娜·沃卓斯基 Lana Wachowski",
+      "actors": [],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1304141/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p443461390.webp"
+    },
+    {
+      "rank": 237,
       "title": "真爱至上",
       "original_title": "Love Actually",
       "other_info": "真的恋爱了(港)  /  爱是您，爱是我(台)",
@@ -4405,22 +4421,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292401/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p475600770.webp"
-    },
-    {
-      "rank": 237,
-      "title": "黑客帝国2：重装上阵",
-      "original_title": "The Matrix Reloaded",
-      "other_info": "22世纪杀人网络2：决战未来(港)  /  骇客任务：重装上阵(台)",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2003",
-      "region": "美国",
-      "genre": "动作 科幻",
-      "director": "拉娜·沃卓斯基 Lana Wachowski",
-      "actors": [],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1304141/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p443461390.webp"
     },
     {
       "rank": 238,
@@ -4666,47 +4666,143 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-10-05T02:27:39.613217",
-    "new_timestamp": "2026-10-12T02:42:29.088304",
-    "baseline_date": "2026-10-05",
+    "old_timestamp": "2026-10-12T02:42:29.088304",
+    "new_timestamp": "2026-10-19T01:53:47.550226",
+    "baseline_date": "2026-10-12",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "上帝之城",
-        "original_title": "Cidade de Deus",
-        "old_rank": 185,
-        "new_rank": 184,
+        "title": "哈利·波特与凤凰社",
+        "original_title": "Harry Potter and the Order of the Phoenix",
+        "old_rank": 229,
+        "new_rank": 228,
+        "change": 1,
+        "rating": 8.6
+      },
+      {
+        "title": "教父3",
+        "original_title": "The Godfather: Part III",
+        "old_rank": 137,
+        "new_rank": 136,
         "change": 1,
         "rating": 9.0
       },
       {
-        "title": "哪吒闹海",
-        "original_title": "",
-        "old_rank": 142,
-        "new_rank": 141,
+        "title": "爱乐之城",
+        "original_title": "La La Land",
+        "old_rank": 203,
+        "new_rank": 202,
         "change": 1,
-        "rating": 9.2
+        "rating": 8.4
+      },
+      {
+        "title": "无耻混蛋",
+        "original_title": "Inglourious Basterds",
+        "old_rank": 215,
+        "new_rank": 214,
+        "change": 1,
+        "rating": 8.7
+      },
+      {
+        "title": "釜山行",
+        "original_title": "부산행",
+        "old_rank": 147,
+        "new_rank": 146,
+        "change": 1,
+        "rating": 8.6
+      },
+      {
+        "title": "借东西的小人阿莉埃蒂",
+        "original_title": "借りぐらしのアリエッティ",
+        "old_rank": 118,
+        "new_rank": 117,
+        "change": 1,
+        "rating": 8.9
+      },
+      {
+        "title": "天使爱美丽",
+        "original_title": "Le Fabuleux destin d'Amélie Poulain",
+        "old_rank": 140,
+        "new_rank": 139,
+        "change": 1,
+        "rating": 8.7
+      },
+      {
+        "title": "黑客帝国2：重装上阵",
+        "original_title": "The Matrix Reloaded",
+        "old_rank": 237,
+        "new_rank": 236,
+        "change": 1,
+        "rating": 8.7
       }
     ],
     "rank_down": [
       {
-        "title": "阳光灿烂的日子",
-        "original_title": "",
-        "old_rank": 141,
-        "new_rank": 142,
+        "title": "城市之光",
+        "original_title": "City Lights",
+        "old_rank": 214,
+        "new_rank": 215,
+        "change": -1,
+        "rating": 9.3
+      },
+      {
+        "title": "虎口脱险",
+        "original_title": "La grande vadrouille",
+        "old_rank": 228,
+        "new_rank": 229,
+        "change": -1,
+        "rating": 8.9
+      },
+      {
+        "title": "完美的世界",
+        "original_title": "A Perfect World",
+        "old_rank": 136,
+        "new_rank": 137,
+        "change": -1,
+        "rating": 9.1
+      },
+      {
+        "title": "遗愿清单",
+        "original_title": "The Bucket List",
+        "old_rank": 202,
+        "new_rank": 203,
+        "change": -1,
+        "rating": 8.7
+      },
+      {
+        "title": "重庆森林",
+        "original_title": "重慶森林",
+        "old_rank": 117,
+        "new_rank": 118,
         "change": -1,
         "rating": 8.8
       },
       {
-        "title": "心迷宫",
-        "original_title": "",
-        "old_rank": 184,
-        "new_rank": 185,
+        "title": "小森林 夏秋篇",
+        "original_title": "リトル・フォレスト 夏・秋",
+        "old_rank": 139,
+        "new_rank": 140,
         "change": -1,
-        "rating": 8.7
+        "rating": 9.0
+      },
+      {
+        "title": "请以你的名字呼唤我",
+        "original_title": "Call Me by Your Name",
+        "old_rank": 146,
+        "new_rank": 147,
+        "change": -1,
+        "rating": 8.8
+      },
+      {
+        "title": "真爱至上",
+        "original_title": "Love Actually",
+        "old_rank": 236,
+        "new_rank": 237,
+        "change": -1,
+        "rating": 8.5
       }
     ],
-    "total_changes": 4
+    "total_changes": 16
   }
 }
