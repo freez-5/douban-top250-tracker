@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-19T01:53:47.550226",
+  "timestamp": "2026-10-26T01:51:30.247415",
   "count": 250,
   "movies": [
     {
@@ -903,25 +903,6 @@
     },
     {
       "rank": 49,
-      "title": "大话西游之月光宝盒",
-      "original_title": "西遊記第壹佰零壹回之月光寶盒",
-      "other_info": "西游记101回月光宝盒  /  齐天大圣东游记",
-      "rating": 9.0,
-      "rating_count": 0,
-      "year": "1995",
-      "region": "中国香港 中国大陆",
-      "genre": "喜剧 爱情 奇幻 古装",
-      "director": "刘镇伟 Jeffrey Lau   主演: 周星驰 Stephen Chow",
-      "actors": [
-        "周星驰 Stephen Chow",
-        "吴孟达 Man Tat Ng..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1299398/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561721372.webp"
-    },
-    {
-      "rank": 50,
       "title": "绿皮书",
       "original_title": "Green Book",
       "other_info": "绿簿旅友(港)  /  幸福绿皮书(台)",
@@ -938,6 +919,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/27060077/",
       "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2531065411.webp"
+    },
+    {
+      "rank": 50,
+      "title": "大话西游之月光宝盒",
+      "original_title": "西遊記第壹佰零壹回之月光寶盒",
+      "other_info": "西游记101回月光宝盒  /  齐天大圣东游记",
+      "rating": 9.0,
+      "rating_count": 0,
+      "year": "1995",
+      "region": "中国香港 中国大陆",
+      "genre": "喜剧 爱情 奇幻 古装",
+      "director": "刘镇伟 Jeffrey Lau   主演: 周星驰 Stephen Chow",
+      "actors": [
+        "周星驰 Stephen Chow",
+        "吴孟达 Man Tat Ng..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1299398/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561721372.webp"
     },
     {
       "rank": 51,
@@ -2223,7 +2223,7 @@
       "title": "入殓师",
       "original_title": "おくりびと",
       "other_info": "礼仪师之奏鸣曲(港)  /  礼仪师(台)",
-      "rating": 8.9,
+      "rating": 8.8,
       "rating_count": 0,
       "year": "2008",
       "region": "日本",
@@ -2804,25 +2804,6 @@
     },
     {
       "rank": 151,
-      "title": "萤火之森",
-      "original_title": "蛍火の杜へ",
-      "other_info": "萤火之社  /  Hotarubi no mori e",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "2011",
-      "region": "日本",
-      "genre": "剧情 爱情 动画 奇幻",
-      "director": "大森贵弘 Takahiro Omori   主演: 佐仓绫音 Ayane Sakura",
-      "actors": [
-        "佐仓绫音 Ayane Sakura",
-        "内山昂辉 K..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/5989818/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1675053073.webp"
-    },
-    {
-      "rank": 152,
       "title": "告白",
       "original_title": "",
       "other_info": "自白  /  母亲",
@@ -2839,6 +2820,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/4268598/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p689520756.webp"
+    },
+    {
+      "rank": 152,
+      "title": "萤火之森",
+      "original_title": "蛍火の杜へ",
+      "other_info": "萤火之社  /  Hotarubi no mori e",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "2011",
+      "region": "日本",
+      "genre": "剧情 爱情 动画 奇幻",
+      "director": "大森贵弘 Takahiro Omori   主演: 佐仓绫音 Ayane Sakura",
+      "actors": [
+        "佐仓绫音 Ayane Sakura",
+        "内山昂辉 K..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/5989818/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1675053073.webp"
     },
     {
       "rank": 153,
@@ -3324,6 +3324,24 @@
     },
     {
       "rank": 179,
+      "title": "雨中曲",
+      "original_title": "Singin' in the Rain",
+      "other_info": "万花嬉春(港 / 台)",
+      "rating": 9.1,
+      "rating_count": 0,
+      "year": "1952",
+      "region": "美国",
+      "genre": "喜剧 歌舞 爱情",
+      "director": "斯坦利·多南 Stanley Donen",
+      "actors": [
+        "吉恩·..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1293460/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1612355875.webp"
+    },
+    {
+      "rank": 180,
       "title": "绿里奇迹",
       "original_title": "The Green Mile",
       "other_info": "绿色奇迹(台)  /  绿色英里",
@@ -3340,24 +3358,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1300374/",
       "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p767586451.webp"
-    },
-    {
-      "rank": 180,
-      "title": "雨中曲",
-      "original_title": "Singin' in the Rain",
-      "other_info": "万花嬉春(港 / 台)",
-      "rating": 9.1,
-      "rating_count": 0,
-      "year": "1952",
-      "region": "美国",
-      "genre": "喜剧 歌舞 爱情",
-      "director": "斯坦利·多南 Stanley Donen",
-      "actors": [
-        "吉恩·..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1293460/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1612355875.webp"
     },
     {
       "rank": 181,
@@ -3452,25 +3452,6 @@
     },
     {
       "rank": 186,
-      "title": "风之谷",
-      "original_title": "風の谷のナウシカ",
-      "other_info": "风谷少女  /  Kaze no tani no Naushika",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "1984",
-      "region": "日本",
-      "genre": "动画 奇幻 冒险",
-      "director": "宫崎骏 Hayao Miyazaki   主演: 岛本须美 Sumi Shimamoto",
-      "actors": [
-        "岛本须美 Sumi Shimamoto",
-        "松田洋治 Y..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1291585/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1917567652.webp"
-    },
-    {
-      "rank": 187,
       "title": "记忆碎片",
       "original_title": "Memento",
       "other_info": "凶心人(港)  /  记忆拼图(台)",
@@ -3487,6 +3468,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1304447/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2931989223.webp"
+    },
+    {
+      "rank": 187,
+      "title": "风之谷",
+      "original_title": "風の谷のナウシカ",
+      "other_info": "风谷少女  /  Kaze no tani no Naushika",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "1984",
+      "region": "日本",
+      "genre": "动画 奇幻 冒险",
+      "director": "宫崎骏 Hayao Miyazaki   主演: 岛本须美 Sumi Shimamoto",
+      "actors": [
+        "岛本须美 Sumi Shimamoto",
+        "松田洋治 Y..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1291585/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1917567652.webp"
     },
     {
       "rank": 188,
@@ -3946,24 +3946,6 @@
     },
     {
       "rank": 212,
-      "title": "贫民窟的百万富翁",
-      "original_title": "Slumdog Millionaire",
-      "other_info": "一百万零一夜(港)  /  贫民百万富翁(台)",
-      "rating": 8.6,
-      "rating_count": 0,
-      "year": "2008",
-      "region": "英国",
-      "genre": "剧情 爱情",
-      "director": "丹尼·鲍尔 Danny Boyle",
-      "actors": [
-        "戴夫..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/2209573/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2434249040.webp"
-    },
-    {
-      "rank": 213,
       "title": "大红灯笼高高挂",
       "original_title": "",
       "other_info": "Raise The Red Lantern  /  Épouses et concubines",
@@ -3981,6 +3963,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1293323/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1254404823.webp"
+    },
+    {
+      "rank": 213,
+      "title": "贫民窟的百万富翁",
+      "original_title": "Slumdog Millionaire",
+      "other_info": "一百万零一夜(港)  /  贫民百万富翁(台)",
+      "rating": 8.6,
+      "rating_count": 0,
+      "year": "2008",
+      "region": "英国",
+      "genre": "剧情 爱情",
+      "director": "丹尼·鲍尔 Danny Boyle",
+      "actors": [
+        "戴夫..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/2209573/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2434249040.webp"
     },
     {
       "rank": 214,
@@ -4314,25 +4314,6 @@
     },
     {
       "rank": 232,
-      "title": "罗生门",
-      "original_title": "羅生門",
-      "other_info": "Rashomon",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "1950",
-      "region": "日本",
-      "genre": "剧情 犯罪 悬疑",
-      "director": "黑泽明 Akira Kurosawa   主演: 三船敏郎 Toshirô Mifune",
-      "actors": [
-        "三船敏郎 Toshirô Mifune",
-        "京町子 ..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1291879/",
-      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1598883511.webp"
-    },
-    {
-      "rank": 233,
       "title": "火星救援",
       "original_title": "The Martian",
       "other_info": "火星任务(港)  /  绝地救援(台)",
@@ -4349,6 +4330,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25864085/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2264592493.webp"
+    },
+    {
+      "rank": 233,
+      "title": "罗生门",
+      "original_title": "羅生門",
+      "other_info": "Rashomon",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "1950",
+      "region": "日本",
+      "genre": "剧情 犯罪 悬疑",
+      "director": "黑泽明 Akira Kurosawa   主演: 三船敏郎 Toshirô Mifune",
+      "actors": [
+        "三船敏郎 Toshirô Mifune",
+        "京町子 ..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1291879/",
+      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1598883511.webp"
     },
     {
       "rank": 234,
@@ -4666,143 +4666,111 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-10-12T02:42:29.088304",
-    "new_timestamp": "2026-10-19T01:53:47.550226",
-    "baseline_date": "2026-10-12",
+    "old_timestamp": "2026-10-19T01:53:47.550226",
+    "new_timestamp": "2026-10-26T01:51:30.247415",
+    "baseline_date": "2026-10-19",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "哈利·波特与凤凰社",
-        "original_title": "Harry Potter and the Order of the Phoenix",
-        "old_rank": 229,
-        "new_rank": 228,
+        "title": "告白",
+        "original_title": "",
+        "old_rank": 152,
+        "new_rank": 151,
         "change": 1,
-        "rating": 8.6
+        "rating": 8.8
       },
       {
-        "title": "教父3",
-        "original_title": "The Godfather: Part III",
-        "old_rank": 137,
-        "new_rank": 136,
+        "title": "大红灯笼高高挂",
+        "original_title": "",
+        "old_rank": 213,
+        "new_rank": 212,
         "change": 1,
-        "rating": 9.0
+        "rating": 8.8
       },
       {
-        "title": "爱乐之城",
-        "original_title": "La La Land",
-        "old_rank": 203,
-        "new_rank": 202,
-        "change": 1,
-        "rating": 8.4
-      },
-      {
-        "title": "无耻混蛋",
-        "original_title": "Inglourious Basterds",
-        "old_rank": 215,
-        "new_rank": 214,
+        "title": "记忆碎片",
+        "original_title": "Memento",
+        "old_rank": 187,
+        "new_rank": 186,
         "change": 1,
         "rating": 8.7
       },
       {
-        "title": "釜山行",
-        "original_title": "부산행",
-        "old_rank": 147,
-        "new_rank": 146,
+        "title": "雨中曲",
+        "original_title": "Singin' in the Rain",
+        "old_rank": 180,
+        "new_rank": 179,
         "change": 1,
-        "rating": 8.6
+        "rating": 9.1
       },
       {
-        "title": "借东西的小人阿莉埃蒂",
-        "original_title": "借りぐらしのアリエッティ",
-        "old_rank": 118,
-        "new_rank": 117,
+        "title": "火星救援",
+        "original_title": "The Martian",
+        "old_rank": 233,
+        "new_rank": 232,
+        "change": 1,
+        "rating": 8.5
+      },
+      {
+        "title": "绿皮书",
+        "original_title": "Green Book",
+        "old_rank": 50,
+        "new_rank": 49,
         "change": 1,
         "rating": 8.9
-      },
-      {
-        "title": "天使爱美丽",
-        "original_title": "Le Fabuleux destin d'Amélie Poulain",
-        "old_rank": 140,
-        "new_rank": 139,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "黑客帝国2：重装上阵",
-        "original_title": "The Matrix Reloaded",
-        "old_rank": 237,
-        "new_rank": 236,
-        "change": 1,
-        "rating": 8.7
       }
     ],
     "rank_down": [
       {
-        "title": "城市之光",
-        "original_title": "City Lights",
-        "old_rank": 214,
-        "new_rank": 215,
+        "title": "萤火之森",
+        "original_title": "蛍火の杜へ",
+        "old_rank": 151,
+        "new_rank": 152,
         "change": -1,
-        "rating": 9.3
+        "rating": 8.8
       },
       {
-        "title": "虎口脱险",
-        "original_title": "La grande vadrouille",
-        "old_rank": 228,
-        "new_rank": 229,
+        "title": "绿里奇迹",
+        "original_title": "The Green Mile",
+        "old_rank": 179,
+        "new_rank": 180,
         "change": -1,
         "rating": 8.9
       },
       {
-        "title": "完美的世界",
-        "original_title": "A Perfect World",
-        "old_rank": 136,
-        "new_rank": 137,
-        "change": -1,
-        "rating": 9.1
-      },
-      {
-        "title": "遗愿清单",
-        "original_title": "The Bucket List",
-        "old_rank": 202,
-        "new_rank": 203,
-        "change": -1,
-        "rating": 8.7
-      },
-      {
-        "title": "重庆森林",
-        "original_title": "重慶森林",
-        "old_rank": 117,
-        "new_rank": 118,
+        "title": "罗生门",
+        "original_title": "羅生門",
+        "old_rank": 232,
+        "new_rank": 233,
         "change": -1,
         "rating": 8.8
       },
       {
-        "title": "小森林 夏秋篇",
-        "original_title": "リトル・フォレスト 夏・秋",
-        "old_rank": 139,
-        "new_rank": 140,
+        "title": "风之谷",
+        "original_title": "風の谷のナウシカ",
+        "old_rank": 186,
+        "new_rank": 187,
+        "change": -1,
+        "rating": 8.9
+      },
+      {
+        "title": "大话西游之月光宝盒",
+        "original_title": "西遊記第壹佰零壹回之月光寶盒",
+        "old_rank": 49,
+        "new_rank": 50,
         "change": -1,
         "rating": 9.0
       },
       {
-        "title": "请以你的名字呼唤我",
-        "original_title": "Call Me by Your Name",
-        "old_rank": 146,
-        "new_rank": 147,
+        "title": "贫民窟的百万富翁",
+        "original_title": "Slumdog Millionaire",
+        "old_rank": 212,
+        "new_rank": 213,
         "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "真爱至上",
-        "original_title": "Love Actually",
-        "old_rank": 236,
-        "new_rank": 237,
-        "change": -1,
-        "rating": 8.5
+        "rating": 8.6
       }
     ],
-    "total_changes": 16
+    "total_changes": 12
   }
 }
