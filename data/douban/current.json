@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T01:51:30.247415",
+  "timestamp": "2026-11-02T02:50:26.846592",
   "count": 250,
   "movies": [
     {
@@ -19,7 +19,7 @@
       ],
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292052/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2934829882.webp"
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2936346968.webp"
     },
     {
       "rank": 2,
@@ -985,8 +985,8 @@
       "rating": 9.4,
       "rating_count": 0,
       "year": "1961(中国大陆)",
-      "region": "1964(中国大陆)",
-      "genre": "1978(中国大陆)",
+      "region": "1978(中国大陆)",
+      "genre": "中国大陆",
       "director": "万籁鸣 Laiming Wan   主演: 邱岳峰 Yuefeng Qiu",
       "actors": [
         "邱岳峰 Yuefeng Qiu",
@@ -1604,25 +1604,6 @@
     },
     {
       "rank": 87,
-      "title": "哈利·波特与密室",
-      "original_title": "Harry Potter and the Chamber of Secrets",
-      "other_info": "哈利波特2：消失的密室(港 / 台)",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "2002",
-      "region": "英国 美国",
-      "genre": "奇幻 冒险",
-      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
-      "actors": [
-        "丹尼尔·雷德克里夫 Daniel Radcliffe",
-        "艾玛..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1296996/",
-      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
-    },
-    {
-      "rank": 88,
       "title": "一一",
       "original_title": "",
       "other_info": "Yi yi  /  Yi yi: A One and a Two",
@@ -1640,6 +1621,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292434/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2923629857.webp"
+    },
+    {
+      "rank": 88,
+      "title": "哈利·波特与密室",
+      "original_title": "Harry Potter and the Chamber of Secrets",
+      "other_info": "哈利波特2：消失的密室(港 / 台)",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "2002",
+      "region": "英国 美国",
+      "genre": "奇幻 冒险",
+      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
+      "actors": [
+        "丹尼尔·雷德克里夫 Daniel Radcliffe",
+        "艾玛..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1296996/",
+      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
     },
     {
       "rank": 89,
@@ -1980,24 +1980,6 @@
     },
     {
       "rank": 107,
-      "title": "超能陆战队",
-      "original_title": "Big Hero 6",
-      "other_info": "大英雄联盟(港)  /  大英雄天团(台)",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "2014",
-      "region": "美国",
-      "genre": "喜剧 动作 科幻 动画 冒险",
-      "director": "唐·霍尔 Don Hall",
-      "actors": [
-        "斯科特..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/11026735/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2224568669.webp"
-    },
-    {
-      "rank": 108,
       "title": "茶馆",
       "original_title": "",
       "other_info": "The Teahouse",
@@ -2015,6 +1997,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1461403/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2528965424.webp"
+    },
+    {
+      "rank": 108,
+      "title": "超能陆战队",
+      "original_title": "Big Hero 6",
+      "other_info": "大英雄联盟(港)  /  大英雄天团(台)",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "2014",
+      "region": "美国",
+      "genre": "喜剧 动作 科幻 动画 冒险",
+      "director": "唐·霍尔 Don Hall",
+      "actors": [
+        "斯科特..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/11026735/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2224568669.webp"
     },
     {
       "rank": 109,
@@ -2804,6 +2804,24 @@
     },
     {
       "rank": 151,
+      "title": "机器人之梦",
+      "original_title": "Robot Dreams",
+      "other_info": "再见机器人(台)  /  汪汪梦里人(港)",
+      "rating": 9.1,
+      "rating_count": 0,
+      "year": "2023",
+      "region": "西班牙 法国",
+      "genre": "剧情 动画 音乐",
+      "director": "巴勃罗·贝格尔 Pablo Berger   主演: 伊万·拉班达 Ivan Labanda",
+      "actors": [
+        "伊万·拉班达 Ivan Labanda"
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/35426925/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2928203369.webp"
+    },
+    {
+      "rank": 152,
       "title": "告白",
       "original_title": "",
       "other_info": "自白  /  母亲",
@@ -2822,7 +2840,7 @@
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p689520756.webp"
     },
     {
-      "rank": 152,
+      "rank": 153,
       "title": "萤火之森",
       "original_title": "蛍火の杜へ",
       "other_info": "萤火之社  /  Hotarubi no mori e",
@@ -2839,24 +2857,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/5989818/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1675053073.webp"
-    },
-    {
-      "rank": 153,
-      "title": "机器人之梦",
-      "original_title": "Robot Dreams",
-      "other_info": "再见机器人(台)  /  汪汪梦里人(港)",
-      "rating": 9.1,
-      "rating_count": 0,
-      "year": "2023",
-      "region": "西班牙 法国",
-      "genre": "剧情 动画 音乐",
-      "director": "巴勃罗·贝格尔 Pablo Berger   主演: 伊万·拉班达 Ivan Labanda",
-      "actors": [
-        "伊万·拉班达 Ivan Labanda"
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/35426925/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2928203369.webp"
     },
     {
       "rank": 154,
@@ -3547,25 +3547,6 @@
     },
     {
       "rank": 191,
-      "title": "无敌破坏王",
-      "original_title": "Wreck-It Ralph",
-      "other_info": "破坏王拉尔夫  /  破坏王大冒险",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2012",
-      "region": "美国",
-      "genre": "喜剧 动画 奇幻 冒险",
-      "director": "瑞奇·莫尔 Rich Moore   主演: 约翰·C·赖利 John C. Reilly",
-      "actors": [
-        "约翰·C·赖利 John C. Reilly",
-        "萨拉..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/6534248/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1735642656.webp"
-    },
-    {
-      "rank": 192,
       "title": "芙蓉镇",
       "original_title": "",
       "other_info": "Hibiscus Town",
@@ -3583,6 +3564,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1297880/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2575337180.webp"
+    },
+    {
+      "rank": 192,
+      "title": "无敌破坏王",
+      "original_title": "Wreck-It Ralph",
+      "other_info": "破坏王拉尔夫  /  破坏王大冒险",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2012",
+      "region": "美国",
+      "genre": "喜剧 动画 奇幻 冒险",
+      "director": "瑞奇·莫尔 Rich Moore   主演: 约翰·C·赖利 John C. Reilly",
+      "actors": [
+        "约翰·C·赖利 John C. Reilly",
+        "萨拉..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/6534248/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1735642656.webp"
     },
     {
       "rank": 193,
@@ -4021,24 +4021,6 @@
     },
     {
       "rank": 216,
-      "title": "哈利·波特与死亡圣器(上)",
-      "original_title": "Harry Potter and the Deathly Hallows: Part 1",
-      "other_info": "哈利波特7：死神的圣物1(港 / 台)",
-      "rating": 8.6,
-      "rating_count": 0,
-      "year": "2010",
-      "region": "英国 美国",
-      "genre": "奇幻 冒险",
-      "director": "大卫·叶茨 David Yates   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe...",
-      "actors": [
-        "丹尼尔·雷德克里夫 Daniel Radcliffe..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/2051007/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2913456984.webp"
-    },
-    {
-      "rank": 217,
       "title": "终结者2：审判日",
       "original_title": "Terminator 2: Judgment Day",
       "other_info": "未来战士2(港)  /  魔鬼终结者2(台)",
@@ -4054,6 +4036,24 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1291844/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1910909085.webp"
+    },
+    {
+      "rank": 217,
+      "title": "哈利·波特与死亡圣器(上)",
+      "original_title": "Harry Potter and the Deathly Hallows: Part 1",
+      "other_info": "哈利波特7：死神的圣物1(港 / 台)",
+      "rating": 8.6,
+      "rating_count": 0,
+      "year": "2010",
+      "region": "英国 美国",
+      "genre": "奇幻 冒险",
+      "director": "大卫·叶茨 David Yates   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe...",
+      "actors": [
+        "丹尼尔·雷德克里夫 Daniel Radcliffe..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/2051007/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2913456984.webp"
     },
     {
       "rank": 218,
@@ -4666,111 +4666,103 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-10-19T01:53:47.550226",
-    "new_timestamp": "2026-10-26T01:51:30.247415",
-    "baseline_date": "2026-10-19",
+    "old_timestamp": "2026-10-26T01:51:30.247415",
+    "new_timestamp": "2026-11-02T02:50:26.846592",
+    "baseline_date": "2026-10-26",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "告白",
-        "original_title": "",
-        "old_rank": 152,
+        "title": "机器人之梦",
+        "original_title": "Robot Dreams",
+        "old_rank": 153,
         "new_rank": 151,
+        "change": 2,
+        "rating": 9.1
+      },
+      {
+        "title": "终结者2：审判日",
+        "original_title": "Terminator 2: Judgment Day",
+        "old_rank": 217,
+        "new_rank": 216,
         "change": 1,
         "rating": 8.8
       },
       {
-        "title": "大红灯笼高高挂",
+        "title": "一一",
         "original_title": "",
-        "old_rank": 213,
-        "new_rank": 212,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "记忆碎片",
-        "original_title": "Memento",
-        "old_rank": 187,
-        "new_rank": 186,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "雨中曲",
-        "original_title": "Singin' in the Rain",
-        "old_rank": 180,
-        "new_rank": 179,
+        "old_rank": 88,
+        "new_rank": 87,
         "change": 1,
         "rating": 9.1
       },
       {
-        "title": "火星救援",
-        "original_title": "The Martian",
-        "old_rank": 233,
-        "new_rank": 232,
+        "title": "茶馆",
+        "original_title": "",
+        "old_rank": 108,
+        "new_rank": 107,
         "change": 1,
-        "rating": 8.5
+        "rating": 9.5
       },
       {
-        "title": "绿皮书",
-        "original_title": "Green Book",
-        "old_rank": 50,
-        "new_rank": 49,
+        "title": "芙蓉镇",
+        "original_title": "",
+        "old_rank": 192,
+        "new_rank": 191,
         "change": 1,
-        "rating": 8.9
+        "rating": 9.3
       }
     ],
     "rank_down": [
       {
-        "title": "萤火之森",
-        "original_title": "蛍火の杜へ",
+        "title": "告白",
+        "original_title": "",
         "old_rank": 151,
         "new_rank": 152,
         "change": -1,
         "rating": 8.8
       },
       {
-        "title": "绿里奇迹",
-        "original_title": "The Green Mile",
-        "old_rank": 179,
-        "new_rank": 180,
+        "title": "哈利·波特与密室",
+        "original_title": "Harry Potter and the Chamber of Secrets",
+        "old_rank": 87,
+        "new_rank": 88,
         "change": -1,
         "rating": 8.9
       },
       {
-        "title": "罗生门",
-        "original_title": "羅生門",
-        "old_rank": 232,
-        "new_rank": 233,
+        "title": "哈利·波特与死亡圣器(上)",
+        "original_title": "Harry Potter and the Deathly Hallows: Part 1",
+        "old_rank": 216,
+        "new_rank": 217,
+        "change": -1,
+        "rating": 8.6
+      },
+      {
+        "title": "无敌破坏王",
+        "original_title": "Wreck-It Ralph",
+        "old_rank": 191,
+        "new_rank": 192,
+        "change": -1,
+        "rating": 8.7
+      },
+      {
+        "title": "萤火之森",
+        "original_title": "蛍火の杜へ",
+        "old_rank": 152,
+        "new_rank": 153,
         "change": -1,
         "rating": 8.8
       },
       {
-        "title": "风之谷",
-        "original_title": "風の谷のナウシカ",
-        "old_rank": 186,
-        "new_rank": 187,
+        "title": "超能陆战队",
+        "original_title": "Big Hero 6",
+        "old_rank": 107,
+        "new_rank": 108,
         "change": -1,
-        "rating": 8.9
-      },
-      {
-        "title": "大话西游之月光宝盒",
-        "original_title": "西遊記第壹佰零壹回之月光寶盒",
-        "old_rank": 49,
-        "new_rank": 50,
-        "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "贫民窟的百万富翁",
-        "original_title": "Slumdog Millionaire",
-        "old_rank": 212,
-        "new_rank": 213,
-        "change": -1,
-        "rating": 8.6
+        "rating": 8.8
       }
     ],
-    "total_changes": 12
+    "total_changes": 11
   }
 }
