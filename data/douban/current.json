@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T02:50:26.846592",
+  "timestamp": "2026-11-09T03:05:25.018602",
   "count": 250,
   "movies": [
     {
@@ -695,25 +695,6 @@
     },
     {
       "rank": 38,
-      "title": "十二怒汉",
-      "original_title": "12 Angry Men",
-      "other_info": "12怒汉  /  十二怒汉",
-      "rating": 9.4,
-      "rating_count": 0,
-      "year": "1957",
-      "region": "美国",
-      "genre": "剧情",
-      "director": "西德尼·吕美特 Sidney Lumet   主演: 亨利·方达 Henry Fonda",
-      "actors": [
-        "亨利·方达 Henry Fonda",
-        "马丁..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1293182/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2173577632.webp"
-    },
-    {
-      "rank": 39,
       "title": "海蒂和爷爷",
       "original_title": "Heidi",
       "other_info": "飘零燕(港)  /  海蒂",
@@ -730,6 +711,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/25958717/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2554525534.webp"
+    },
+    {
+      "rank": 39,
+      "title": "十二怒汉",
+      "original_title": "12 Angry Men",
+      "other_info": "12怒汉  /  十二怒汉",
+      "rating": 9.4,
+      "rating_count": 0,
+      "year": "1957",
+      "region": "美国",
+      "genre": "剧情",
+      "director": "西德尼·吕美特 Sidney Lumet   主演: 亨利·方达 Henry Fonda",
+      "actors": [
+        "亨利·方达 Henry Fonda",
+        "马丁..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1293182/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2173577632.webp"
     },
     {
       "rank": 40,
@@ -1575,7 +1575,7 @@
       "rating_count": 0,
       "year": "2006",
       "region": "英国 美国",
-      "genre": "剧情 悬疑 惊悚",
+      "genre": "剧情 科幻 悬疑 惊悚",
       "director": "克里斯托弗·诺兰 Christopher Nolan   主演: 休·杰克曼 Hugh Jackman...",
       "actors": [
         "休·杰克曼 Hugh Jackman..."
@@ -1604,6 +1604,25 @@
     },
     {
       "rank": 87,
+      "title": "哈利·波特与密室",
+      "original_title": "Harry Potter and the Chamber of Secrets",
+      "other_info": "哈利波特2：消失的密室(港 / 台)",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "2002",
+      "region": "英国 美国",
+      "genre": "奇幻 冒险",
+      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
+      "actors": [
+        "丹尼尔·雷德克里夫 Daniel Radcliffe",
+        "艾玛..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1296996/",
+      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
+    },
+    {
+      "rank": 88,
       "title": "一一",
       "original_title": "",
       "other_info": "Yi yi  /  Yi yi: A One and a Two",
@@ -1621,25 +1640,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292434/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2923629857.webp"
-    },
-    {
-      "rank": 88,
-      "title": "哈利·波特与密室",
-      "original_title": "Harry Potter and the Chamber of Secrets",
-      "other_info": "哈利波特2：消失的密室(港 / 台)",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "2002",
-      "region": "英国 美国",
-      "genre": "奇幻 冒险",
-      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
-      "actors": [
-        "丹尼尔·雷德克里夫 Daniel Radcliffe",
-        "艾玛..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1296996/",
-      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
     },
     {
       "rank": 89,
@@ -2258,6 +2258,24 @@
     },
     {
       "rank": 122,
+      "title": "时空恋旅人",
+      "original_title": "About Time",
+      "other_info": "回到最爱的一天(港)  /  真爱每一天(台)",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "2013",
+      "region": "英国 美国",
+      "genre": "喜剧 爱情 奇幻",
+      "director": "理查德·柯蒂斯 Richard Curtis   主演: 多姆纳尔·格里森 Domhnall Gl...",
+      "actors": [
+        "多姆纳尔·格里森 Domhnall Gl..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/10577869/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2070153774.webp"
+    },
+    {
+      "rank": 123,
       "title": "剪刀手爱德华",
       "original_title": "Edward Scissorhands",
       "other_info": "幻海奇缘(港)  /  剪刀手爱德华",
@@ -2274,24 +2292,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292370/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480956937.webp"
-    },
-    {
-      "rank": 123,
-      "title": "时空恋旅人",
-      "original_title": "About Time",
-      "other_info": "回到最爱的一天(港)  /  真爱每一天(台)",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "2013",
-      "region": "英国 美国",
-      "genre": "喜剧 爱情 奇幻",
-      "director": "理查德·柯蒂斯 Richard Curtis   主演: 多姆纳尔·格里森 Domhnall Gl...",
-      "actors": [
-        "多姆纳尔·格里森 Domhnall Gl..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/10577869/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2070153774.webp"
     },
     {
       "rank": 124,
@@ -2632,6 +2632,25 @@
     },
     {
       "rank": 142,
+      "title": "被解救的姜戈",
+      "original_title": "Django Unchained",
+      "other_info": "被解放的姜戈  /  决杀令(台)",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "2012",
+      "region": "美国",
+      "genre": "剧情 动作 西部 冒险",
+      "director": "昆汀·塔伦蒂诺 Quentin Tarantino   主演: 杰米·福克斯 Jamie Foxx",
+      "actors": [
+        "杰米·福克斯 Jamie Foxx",
+        "..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/6307447/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1800813767.webp"
+    },
+    {
+      "rank": 143,
       "title": "阳光灿烂的日子",
       "original_title": "",
       "other_info": "In the Heat of the Sun",
@@ -2649,25 +2668,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1291875/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2582946597.webp"
-    },
-    {
-      "rank": 143,
-      "title": "被解救的姜戈",
-      "original_title": "Django Unchained",
-      "other_info": "被解放的姜戈  /  决杀令(台)",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "2012",
-      "region": "美国",
-      "genre": "剧情 动作 西部 冒险",
-      "director": "昆汀·塔伦蒂诺 Quentin Tarantino   主演: 杰米·福克斯 Jamie Foxx",
-      "actors": [
-        "杰米·福克斯 Jamie Foxx",
-        "..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/6307447/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1800813767.webp"
     },
     {
       "rank": 144,
@@ -3586,25 +3586,6 @@
     },
     {
       "rank": 193,
-      "title": "魔女宅急便",
-      "original_title": "魔女の宅急便",
-      "other_info": "魔女琪琪(台)  /  小魔女限时专送",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "1989",
-      "region": "日本",
-      "genre": "动画 奇幻 冒险",
-      "director": "宫崎骏 Hayao Miyazaki   主演: 高山南 Minami Takayama",
-      "actors": [
-        "高山南 Minami Takayama",
-        "佐久间玲 Re..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1307811/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p456676352.webp"
-    },
-    {
-      "rank": 194,
       "title": "牯岭街少年杀人事件",
       "original_title": "牯嶺街少年殺人事件",
       "other_info": "A Brighter Summer Day",
@@ -3622,6 +3603,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292329/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p848381236.webp"
+    },
+    {
+      "rank": 194,
+      "title": "魔女宅急便",
+      "original_title": "魔女の宅急便",
+      "other_info": "魔女琪琪(台)  /  小魔女限时专送",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "1989",
+      "region": "日本",
+      "genre": "动画 奇幻 冒险",
+      "director": "宫崎骏 Hayao Miyazaki   主演: 高山南 Minami Takayama",
+      "actors": [
+        "高山南 Minami Takayama",
+        "佐久间玲 Re..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1307811/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p456676352.webp"
     },
     {
       "rank": 195,
@@ -3775,25 +3775,6 @@
     },
     {
       "rank": 203,
-      "title": "遗愿清单",
-      "original_title": "The Bucket List",
-      "other_info": "玩转身前事(港)  /  一路玩到挂(台)",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2007",
-      "region": "美国",
-      "genre": "冒险 喜剧 剧情",
-      "director": "罗伯·莱纳 Rob Reiner   主演: 杰克·尼科尔森 Jack Nicholson",
-      "actors": [
-        "杰克·尼科尔森 Jack Nicholson",
-        "摩根..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1867345/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2676812053.webp"
-    },
-    {
-      "rank": 204,
       "title": "花束般的恋爱",
       "original_title": "花束みたいな恋をした",
       "other_info": "她和他的恋爱花期(港)  /  爱如花束 恋恋不忘",
@@ -3810,6 +3791,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/34874432/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2868462052.webp"
+    },
+    {
+      "rank": 204,
+      "title": "遗愿清单",
+      "original_title": "The Bucket List",
+      "other_info": "玩转身前事(港)  /  一路玩到挂(台)",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2007",
+      "region": "美国",
+      "genre": "冒险 喜剧 剧情",
+      "director": "罗伯·莱纳 Rob Reiner   主演: 杰克·尼科尔森 Jack Nicholson",
+      "actors": [
+        "杰克·尼科尔森 Jack Nicholson",
+        "摩根..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1867345/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2676812053.webp"
     },
     {
       "rank": 205,
@@ -3927,25 +3927,6 @@
     },
     {
       "rank": 211,
-      "title": "你看起来好像很好吃",
-      "original_title": "おまえうまそうだな",
-      "other_info": "你看起来很好吃(台)  /  你看上去好像很好吃",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "2010",
-      "region": "日本",
-      "genre": "剧情 动画 儿童",
-      "director": "藤森雅也 Masaya Fujimori   主演: 山口胜平 Kappei Yamaguchi",
-      "actors": [
-        "山口胜平 Kappei Yamaguchi",
-        "爱河..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/4848115/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p709670262.webp"
-    },
-    {
-      "rank": 212,
       "title": "大红灯笼高高挂",
       "original_title": "",
       "other_info": "Raise The Red Lantern  /  Épouses et concubines",
@@ -3963,6 +3944,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1293323/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1254404823.webp"
+    },
+    {
+      "rank": 212,
+      "title": "你看起来好像很好吃",
+      "original_title": "おまえうまそうだな",
+      "other_info": "你看起来很好吃(台)  /  你看上去好像很好吃",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "2010",
+      "region": "日本",
+      "genre": "剧情 动画 儿童",
+      "director": "藤森雅也 Masaya Fujimori   主演: 山口胜平 Kappei Yamaguchi",
+      "actors": [
+        "山口胜平 Kappei Yamaguchi",
+        "爱河..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/4848115/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p709670262.webp"
     },
     {
       "rank": 213,
@@ -4352,6 +4352,24 @@
     },
     {
       "rank": 234,
+      "title": "冰雪奇缘",
+      "original_title": "Frozen",
+      "other_info": "魔雪奇缘(港)  /  冰雪大冒险",
+      "rating": 8.5,
+      "rating_count": 0,
+      "year": "2013",
+      "region": "美国",
+      "genre": "喜剧 动画 奇幻 歌舞",
+      "director": "克里斯·巴克 Chris Buck",
+      "actors": [
+        "克里斯汀..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/4202982/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2151245053.webp"
+    },
+    {
+      "rank": 235,
       "title": "恋恋笔记本",
       "original_title": "The Notebook",
       "other_info": "忘了·忘不了(港)  /  手札情缘(台)",
@@ -4368,24 +4386,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1309163/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p483604864.webp"
-    },
-    {
-      "rank": 235,
-      "title": "冰雪奇缘",
-      "original_title": "Frozen",
-      "other_info": "魔雪奇缘(港)  /  冰雪大冒险",
-      "rating": 8.5,
-      "rating_count": 0,
-      "year": "2013",
-      "region": "美国",
-      "genre": "喜剧 动画 奇幻 歌舞",
-      "director": "克里斯·巴克 Chris Buck",
-      "actors": [
-        "克里斯汀..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/4202982/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2151245053.webp"
     },
     {
       "rank": 236,
@@ -4666,103 +4666,143 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-10-26T01:51:30.247415",
-    "new_timestamp": "2026-11-02T02:50:26.846592",
-    "baseline_date": "2026-10-26",
+    "old_timestamp": "2026-11-02T02:50:26.846592",
+    "new_timestamp": "2026-11-09T03:05:25.018602",
+    "baseline_date": "2026-11-02",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "机器人之梦",
-        "original_title": "Robot Dreams",
-        "old_rank": 153,
-        "new_rank": 151,
-        "change": 2,
-        "rating": 9.1
+        "title": "冰雪奇缘",
+        "original_title": "Frozen",
+        "old_rank": 235,
+        "new_rank": 234,
+        "change": 1,
+        "rating": 8.5
       },
       {
-        "title": "终结者2：审判日",
-        "original_title": "Terminator 2: Judgment Day",
-        "old_rank": 217,
-        "new_rank": 216,
+        "title": "花束般的恋爱",
+        "original_title": "花束みたいな恋をした",
+        "old_rank": 204,
+        "new_rank": 203,
+        "change": 1,
+        "rating": 8.6
+      },
+      {
+        "title": "大红灯笼高高挂",
+        "original_title": "",
+        "old_rank": 212,
+        "new_rank": 211,
         "change": 1,
         "rating": 8.8
       },
       {
-        "title": "一一",
-        "original_title": "",
-        "old_rank": 88,
-        "new_rank": 87,
-        "change": 1,
-        "rating": 9.1
-      },
-      {
-        "title": "茶馆",
-        "original_title": "",
-        "old_rank": 108,
-        "new_rank": 107,
-        "change": 1,
-        "rating": 9.5
-      },
-      {
-        "title": "芙蓉镇",
-        "original_title": "",
-        "old_rank": 192,
-        "new_rank": 191,
+        "title": "海蒂和爷爷",
+        "original_title": "Heidi",
+        "old_rank": 39,
+        "new_rank": 38,
         "change": 1,
         "rating": 9.3
-      }
-    ],
-    "rank_down": [
+      },
       {
-        "title": "告白",
-        "original_title": "",
-        "old_rank": 151,
-        "new_rank": 152,
-        "change": -1,
+        "title": "被解救的姜戈",
+        "original_title": "Django Unchained",
+        "old_rank": 143,
+        "new_rank": 142,
+        "change": 1,
         "rating": 8.8
       },
       {
         "title": "哈利·波特与密室",
         "original_title": "Harry Potter and the Chamber of Secrets",
-        "old_rank": 87,
-        "new_rank": 88,
+        "old_rank": 88,
+        "new_rank": 87,
+        "change": 1,
+        "rating": 8.9
+      },
+      {
+        "title": "时空恋旅人",
+        "original_title": "About Time",
+        "old_rank": 123,
+        "new_rank": 122,
+        "change": 1,
+        "rating": 8.8
+      },
+      {
+        "title": "牯岭街少年杀人事件",
+        "original_title": "牯嶺街少年殺人事件",
+        "old_rank": 194,
+        "new_rank": 193,
+        "change": 1,
+        "rating": 8.9
+      }
+    ],
+    "rank_down": [
+      {
+        "title": "恋恋笔记本",
+        "original_title": "The Notebook",
+        "old_rank": 234,
+        "new_rank": 235,
+        "change": -1,
+        "rating": 8.5
+      },
+      {
+        "title": "魔女宅急便",
+        "original_title": "魔女の宅急便",
+        "old_rank": 193,
+        "new_rank": 194,
+        "change": -1,
+        "rating": 8.8
+      },
+      {
+        "title": "你看起来好像很好吃",
+        "original_title": "おまえうまそうだな",
+        "old_rank": 211,
+        "new_rank": 212,
         "change": -1,
         "rating": 8.9
       },
       {
-        "title": "哈利·波特与死亡圣器(上)",
-        "original_title": "Harry Potter and the Deathly Hallows: Part 1",
-        "old_rank": 216,
-        "new_rank": 217,
+        "title": "十二怒汉",
+        "original_title": "12 Angry Men",
+        "old_rank": 38,
+        "new_rank": 39,
         "change": -1,
-        "rating": 8.6
+        "rating": 9.4
       },
       {
-        "title": "无敌破坏王",
-        "original_title": "Wreck-It Ralph",
-        "old_rank": 191,
-        "new_rank": 192,
+        "title": "剪刀手爱德华",
+        "original_title": "Edward Scissorhands",
+        "old_rank": 122,
+        "new_rank": 123,
         "change": -1,
         "rating": 8.7
       },
       {
-        "title": "萤火之森",
-        "original_title": "蛍火の杜へ",
-        "old_rank": 152,
-        "new_rank": 153,
+        "title": "遗愿清单",
+        "original_title": "The Bucket List",
+        "old_rank": 203,
+        "new_rank": 204,
         "change": -1,
-        "rating": 8.8
+        "rating": 8.7
       },
       {
-        "title": "超能陆战队",
-        "original_title": "Big Hero 6",
-        "old_rank": 107,
-        "new_rank": 108,
+        "title": "一一",
+        "original_title": "",
+        "old_rank": 87,
+        "new_rank": 88,
+        "change": -1,
+        "rating": 9.1
+      },
+      {
+        "title": "阳光灿烂的日子",
+        "original_title": "",
+        "old_rank": 142,
+        "new_rank": 143,
         "change": -1,
         "rating": 8.8
       }
     ],
-    "total_changes": 11
+    "total_changes": 16
   }
 }
