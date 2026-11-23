@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T03:17:42.808177",
+  "timestamp": "2026-11-23T04:07:54.641635",
   "count": 250,
   "movies": [
     {
@@ -1604,25 +1604,6 @@
     },
     {
       "rank": 87,
-      "title": "哈利·波特与密室",
-      "original_title": "Harry Potter and the Chamber of Secrets",
-      "other_info": "哈利波特2：消失的密室(港 / 台)",
-      "rating": 8.9,
-      "rating_count": 0,
-      "year": "2002",
-      "region": "英国 美国",
-      "genre": "奇幻 冒险",
-      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
-      "actors": [
-        "丹尼尔·雷德克里夫 Daniel Radcliffe",
-        "艾玛..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1296996/",
-      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
-    },
-    {
-      "rank": 88,
       "title": "一一",
       "original_title": "",
       "other_info": "Yi yi  /  Yi yi: A One and a Two",
@@ -1640,6 +1621,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1292434/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2923629857.webp"
+    },
+    {
+      "rank": 88,
+      "title": "哈利·波特与密室",
+      "original_title": "Harry Potter and the Chamber of Secrets",
+      "other_info": "哈利波特2：消失的密室(港 / 台)",
+      "rating": 8.9,
+      "rating_count": 0,
+      "year": "2002",
+      "region": "英国 美国",
+      "genre": "奇幻 冒险",
+      "director": "Chris Columbus   主演: 丹尼尔·雷德克里夫 Daniel Radcliffe",
+      "actors": [
+        "丹尼尔·雷德克里夫 Daniel Radcliffe",
+        "艾玛..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1296996/",
+      "cover_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2913781951.webp"
     },
     {
       "rank": 89,
@@ -2765,25 +2765,6 @@
     },
     {
       "rank": 149,
-      "title": "小森林 冬春篇",
-      "original_title": "リトル・フォレスト 冬・春",
-      "other_info": "小森食光 / 冬春篇(台)",
-      "rating": 9.0,
-      "rating_count": 0,
-      "year": "2015",
-      "region": "日本",
-      "genre": "剧情",
-      "director": "森淳一 Junichi Mori   主演: 桥本爱 Ai Hashimoto",
-      "actors": [
-        "桥本爱 Ai Hashimoto",
-        "三浦贵大 Takahir..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/25814707/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2258078370.webp"
-    },
-    {
-      "rank": 150,
       "title": "喜宴",
       "original_title": "囍宴",
       "other_info": "The Wedding Banquet",
@@ -2801,6 +2782,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1303037/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2249048907.webp"
+    },
+    {
+      "rank": 150,
+      "title": "小森林 冬春篇",
+      "original_title": "リトル・フォレスト 冬・春",
+      "other_info": "小森食光 / 冬春篇(台)",
+      "rating": 9.0,
+      "rating_count": 0,
+      "year": "2015",
+      "region": "日本",
+      "genre": "剧情",
+      "director": "森淳一 Junichi Mori   主演: 桥本爱 Ai Hashimoto",
+      "actors": [
+        "桥本爱 Ai Hashimoto",
+        "三浦贵大 Takahir..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/25814707/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2258078370.webp"
     },
     {
       "rank": 151,
@@ -3026,25 +3026,6 @@
     },
     {
       "rank": 163,
-      "title": "血战钢锯岭",
-      "original_title": "Hacksaw Ridge",
-      "other_info": "钢锯岭  /  钢铁英雄(台)",
-      "rating": 8.7,
-      "rating_count": 0,
-      "year": "2016",
-      "region": "澳大利亚 美国",
-      "genre": "剧情 传记 历史 战争",
-      "director": "梅尔·吉布森 Mel Gibson   主演: 安德鲁·加菲尔德 Andrew Garfield",
-      "actors": [
-        "安德鲁·加菲尔德 Andrew Garfield",
-        "..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/26325320/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2398141939.webp"
-    },
-    {
-      "rank": 164,
       "title": "高山下的花环",
       "original_title": "",
       "other_info": "卫国军魂(港)  /  Wreaths at the Foot of the Mountain",
@@ -3062,6 +3043,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1422283/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2319879389.webp"
+    },
+    {
+      "rank": 164,
+      "title": "血战钢锯岭",
+      "original_title": "Hacksaw Ridge",
+      "other_info": "钢锯岭  /  钢铁英雄(台)",
+      "rating": 8.7,
+      "rating_count": 0,
+      "year": "2016",
+      "region": "澳大利亚 美国",
+      "genre": "剧情 传记 历史 战争",
+      "director": "梅尔·吉布森 Mel Gibson   主演: 安德鲁·加菲尔德 Andrew Garfield",
+      "actors": [
+        "安德鲁·加菲尔德 Andrew Garfield",
+        "..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/26325320/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2398141939.webp"
     },
     {
       "rank": 165,
@@ -3908,25 +3908,6 @@
     },
     {
       "rank": 210,
-      "title": "波西米亚狂想曲",
-      "original_title": "Bohemian Rhapsody",
-      "other_info": "波希米亚狂想曲：摇滚传说(港)  /  波希米亚狂想曲(台)",
-      "rating": 8.6,
-      "rating_count": 0,
-      "year": "2018",
-      "region": "英国 美国",
-      "genre": "剧情 传记 同性 音乐",
-      "director": "布莱恩·辛格 Bryan Singer   主演: 拉米·马雷克 Rami Malek",
-      "actors": [
-        "拉米·马雷克 Rami Malek",
-        "本·哈..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/5300054/",
-      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549558913.webp"
-    },
-    {
-      "rank": 211,
       "title": "大红灯笼高高挂",
       "original_title": "",
       "other_info": "Raise The Red Lantern  /  Épouses et concubines",
@@ -3944,6 +3925,25 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/1293323/",
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1254404823.webp"
+    },
+    {
+      "rank": 211,
+      "title": "波西米亚狂想曲",
+      "original_title": "Bohemian Rhapsody",
+      "other_info": "波希米亚狂想曲：摇滚传说(港)  /  波希米亚狂想曲(台)",
+      "rating": 8.6,
+      "rating_count": 0,
+      "year": "2018",
+      "region": "英国 美国",
+      "genre": "剧情 传记 同性 音乐",
+      "director": "布莱恩·辛格 Bryan Singer   主演: 拉米·马雷克 Rami Malek",
+      "actors": [
+        "拉米·马雷克 Rami Malek",
+        "本·哈..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/5300054/",
+      "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549558913.webp"
     },
     {
       "rank": 212,
@@ -4003,6 +4003,24 @@
     },
     {
       "rank": 215,
+      "title": "终结者2：审判日",
+      "original_title": "Terminator 2: Judgment Day",
+      "other_info": "未来战士2(港)  /  魔鬼终结者2(台)",
+      "rating": 8.8,
+      "rating_count": 0,
+      "year": "1991",
+      "region": "美国 法国",
+      "genre": "动作 科幻",
+      "director": "詹姆斯·卡梅隆 James Cameron   主演: 阿诺·施瓦辛格 Arnold Schwarz...",
+      "actors": [
+        "阿诺·施瓦辛格 Arnold Schwarz..."
+      ],
+      "quote": "",
+      "douban_url": "https://movie.douban.com/subject/1291844/",
+      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1910909085.webp"
+    },
+    {
+      "rank": 216,
       "title": "城市之光",
       "original_title": "City Lights",
       "other_info": "City Lights: A Comedy Romance in Pantomime  /  Lichter der Großstadt",
@@ -4020,7 +4038,7 @@
       "cover_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2170238828.webp"
     },
     {
-      "rank": 216,
+      "rank": 217,
       "title": "哈利·波特与死亡圣器(上)",
       "original_title": "Harry Potter and the Deathly Hallows: Part 1",
       "other_info": "哈利波特7：死神的圣物1(港 / 台)",
@@ -4036,24 +4054,6 @@
       "quote": "",
       "douban_url": "https://movie.douban.com/subject/2051007/",
       "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2913456984.webp"
-    },
-    {
-      "rank": 217,
-      "title": "终结者2：审判日",
-      "original_title": "Terminator 2: Judgment Day",
-      "other_info": "未来战士2(港)  /  魔鬼终结者2(台)",
-      "rating": 8.8,
-      "rating_count": 0,
-      "year": "1991",
-      "region": "美国 法国",
-      "genre": "动作 科幻",
-      "director": "詹姆斯·卡梅隆 James Cameron   主演: 阿诺·施瓦辛格 Arnold Schwarz...",
-      "actors": [
-        "阿诺·施瓦辛格 Arnold Schwarz..."
-      ],
-      "quote": "",
-      "douban_url": "https://movie.douban.com/subject/1291844/",
-      "cover_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1910909085.webp"
     },
     {
       "rank": 218,
@@ -4666,175 +4666,103 @@
   ],
   "changes": {
     "has_previous": true,
-    "old_timestamp": "2026-11-09T03:05:25.018602",
-    "new_timestamp": "2026-11-16T03:17:42.808177",
-    "baseline_date": "2026-11-09",
+    "old_timestamp": "2026-11-16T03:17:42.808177",
+    "new_timestamp": "2026-11-23T04:07:54.641635",
+    "baseline_date": "2026-11-16",
     "entered": [],
     "exited": [],
     "rank_up": [
       {
-        "title": "头脑特工队",
-        "original_title": "Inside Out",
-        "old_rank": 112,
-        "new_rank": 111,
-        "change": 1,
-        "rating": 8.9
-      },
-      {
-        "title": "釜山行",
-        "original_title": "부산행",
-        "old_rank": 146,
-        "new_rank": 145,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "血观音",
-        "original_title": "血觀音",
-        "old_rank": 245,
-        "new_rank": 244,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "心迷宫",
-        "original_title": "",
-        "old_rank": 185,
-        "new_rank": 184,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "教父2",
-        "original_title": "The Godfather: Part II",
-        "old_rank": 57,
-        "new_rank": 56,
-        "change": 1,
-        "rating": 9.3
-      },
-      {
-        "title": "谍影重重2",
-        "original_title": "The Bourne Supremacy",
-        "old_rank": 240,
-        "new_rank": 239,
-        "change": 1,
-        "rating": 8.7
-      },
-      {
-        "title": "魔女宅急便",
-        "original_title": "魔女の宅急便",
-        "old_rank": 194,
-        "new_rank": 193,
-        "change": 1,
-        "rating": 8.8
-      },
-      {
-        "title": "小姐",
-        "original_title": "아가씨",
-        "old_rank": 247,
-        "new_rank": 246,
-        "change": 1,
-        "rating": 8.6
-      },
-      {
-        "title": "哈利·波特与死亡圣器(上)",
-        "original_title": "Harry Potter and the Deathly Hallows: Part 1",
+        "title": "终结者2：审判日",
+        "original_title": "Terminator 2: Judgment Day",
         "old_rank": 217,
-        "new_rank": 216,
-        "change": 1,
-        "rating": 8.6
+        "new_rank": 215,
+        "change": 2,
+        "rating": 8.8
       },
       {
-        "title": "九品芝麻官",
+        "title": "一一",
         "original_title": "",
-        "old_rank": 138,
-        "new_rank": 137,
+        "old_rank": 88,
+        "new_rank": 87,
+        "change": 1,
+        "rating": 9.1
+      },
+      {
+        "title": "喜宴",
+        "original_title": "囍宴",
+        "old_rank": 150,
+        "new_rank": 149,
+        "change": 1,
+        "rating": 9.0
+      },
+      {
+        "title": "大红灯笼高高挂",
+        "original_title": "",
+        "old_rank": 211,
+        "new_rank": 210,
         "change": 1,
         "rating": 8.8
+      },
+      {
+        "title": "高山下的花环",
+        "original_title": "",
+        "old_rank": 164,
+        "new_rank": 163,
+        "change": 1,
+        "rating": 9.5
       }
     ],
     "rank_down": [
       {
-        "title": "牯岭街少年杀人事件",
-        "original_title": "牯嶺街少年殺人事件",
-        "old_rank": 193,
-        "new_rank": 194,
+        "title": "小森林 冬春篇",
+        "original_title": "リトル・フォレスト 冬・春",
+        "old_rank": 149,
+        "new_rank": 150,
+        "change": -1,
+        "rating": 9.0
+      },
+      {
+        "title": "波西米亚狂想曲",
+        "original_title": "Bohemian Rhapsody",
+        "old_rank": 210,
+        "new_rank": 211,
+        "change": -1,
+        "rating": 8.6
+      },
+      {
+        "title": "哈利·波特与密室",
+        "original_title": "Harry Potter and the Chamber of Secrets",
+        "old_rank": 87,
+        "new_rank": 88,
         "change": -1,
         "rating": 8.9
       },
       {
-        "title": "血钻",
-        "original_title": "Blood Diamond",
-        "old_rank": 246,
-        "new_rank": 247,
-        "change": -1,
-        "rating": 8.7
-      },
-      {
-        "title": "上帝之城",
-        "original_title": "Cidade de Deus",
-        "old_rank": 184,
-        "new_rank": 185,
-        "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "攻壳机动队",
-        "original_title": "攻殻機動隊",
-        "old_rank": 244,
-        "new_rank": 245,
-        "change": -1,
-        "rating": 9.0
-      },
-      {
-        "title": "罗马假日",
-        "original_title": "Roman Holiday",
-        "old_rank": 56,
-        "new_rank": 57,
-        "change": -1,
-        "rating": 9.1
-      },
-      {
-        "title": "幸福终点站",
-        "original_title": "The Terminal",
-        "old_rank": 145,
-        "new_rank": 146,
-        "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "完美的世界",
-        "original_title": "A Perfect World",
-        "old_rank": 137,
-        "new_rank": 138,
-        "change": -1,
-        "rating": 9.1
-      },
-      {
-        "title": "步履不停",
-        "original_title": "歩いても 歩いても",
-        "old_rank": 239,
-        "new_rank": 240,
-        "change": -1,
-        "rating": 8.8
-      },
-      {
-        "title": "终结者2：审判日",
-        "original_title": "Terminator 2: Judgment Day",
+        "title": "哈利·波特与死亡圣器(上)",
+        "original_title": "Harry Potter and the Deathly Hallows: Part 1",
         "old_rank": 216,
         "new_rank": 217,
         "change": -1,
-        "rating": 8.8
+        "rating": 8.6
       },
       {
-        "title": "爱在日落黄昏时",
-        "original_title": "Before Sunset",
-        "old_rank": 111,
-        "new_rank": 112,
+        "title": "城市之光",
+        "original_title": "City Lights",
+        "old_rank": 215,
+        "new_rank": 216,
         "change": -1,
-        "rating": 8.9
+        "rating": 9.3
+      },
+      {
+        "title": "血战钢锯岭",
+        "original_title": "Hacksaw Ridge",
+        "old_rank": 163,
+        "new_rank": 164,
+        "change": -1,
+        "rating": 8.7
       }
     ],
-    "total_changes": 20
+    "total_changes": 11
   }
 }
